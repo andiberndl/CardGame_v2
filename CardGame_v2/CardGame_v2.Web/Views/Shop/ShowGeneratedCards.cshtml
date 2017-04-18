@@ -1,0 +1,12 @@
+﻿@model IEnumerable<Card>
+
+@{
+    ViewBag.Title = "ShowGeneratedCards";
+}
+
+<h2>ShowOrderedCards</h2>
+
+@Html.Partial("_CardList", Model)
+
+@Html.ActionLink("Back to Shop", "Index")
+

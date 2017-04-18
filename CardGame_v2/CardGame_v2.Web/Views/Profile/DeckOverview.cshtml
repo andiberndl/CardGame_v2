@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Deck>
+
+@{
+    ViewBag.Title = "DeckOverview";
+}
+
+<h2>DeckOverview</h2>
+
+<h3>You currently have @Model.ToList().Count decks</h3>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(d => d.Name)
+        </th>
+        <th>
+
+        </th>
+    </tr>
+
+    @foreach (var deck in Model)
+    {
+        <tr>
+            <th>
+                @Html.DisplayFor(d => deck.Name)
+            </th>
+            <th>
+                @Html.ActionLink("View Deck", "DeckDetails", new { id = deck.DeckID} )
+            </th>
+        </tr>
+    }
+</table>

@@ -1,0 +1,12 @@
+﻿@model IEnumerable<Card>
+
+@{
+    ViewBag.Title = "CardCollection";
+}
+
+<h2>CardCollection</h2>
+
+@Html.Partial("_CardList", Model)
+
+@Html.ActionLink("Back to Profile", "Index")
+

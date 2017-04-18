@@ -1,0 +1,12 @@
+﻿@model IEnumerable<Card>
+
+@{
+    ViewBag.Title = "DeckDetails";
+}
+
+<h2>DeckDetails</h2>
+
+@Html.Partial("_CardList", Model)
+
+@Html.ActionLink("Edit Deck", "EditDeck","DeckBuilder", new { id = ViewContext.RouteData.Values["id"]}, null)
+@Html.ActionLink("Back to Deck Overview", "DeckOverview") 

@@ -1,0 +1,30 @@
+﻿@model UserProfile
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h1>Welcome, @Model.Email</h1>
+
+<h2>You currently have @Model.Currency credits!</h2>
+
+<h2>Your Details</h2>
+@Html.DisplayNameFor(up => up.FirstName):
+@Html.DisplayFor(up => up.FirstName)
+<br />
+@Html.DisplayNameFor(up => up.LastName):
+@Html.DisplayFor(up => up.LastName)
+<br />
+@Html.DisplayNameFor(up => up.Email):
+@Html.DisplayFor(up => up.Email)
+<br />
+<h3>@Html.ActionLink("Cards Owned","CardCollection")</h3>
+@Html.DisplayNameFor(up => up.NumDistinctCardsOwned):
+@Html.DisplayFor(up => up.NumDistinctCardsOwned)
+<br />
+@Html.DisplayNameFor(up => up.NumTotalCardsOwned):
+@Html.DisplayFor(up => up.NumTotalCardsOwned)
+<h3>@Html.ActionLink("Decks Owned", "DeckOverview")</h3>
+@Html.DisplayNameFor(up => up.NumDecksOwned):
+@Html.DisplayFor(up => up.NumDecksOwned)
+

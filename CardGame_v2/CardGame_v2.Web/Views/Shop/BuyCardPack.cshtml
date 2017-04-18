@@ -1,0 +1,28 @@
+﻿@model CardPack
+@{
+    ViewBag.Title = "BuyCardPack";
+}
+
+<h2>@Model.PackName</h2>
+
+@Html.DisplayNameFor(cp => cp.NumCards):
+@Html.DisplayFor(cp => cp.NumCards)
+<br />
+@Html.DisplayNameFor(cp => cp.Price):
+@Html.DisplayFor(cp => cp.Price)
+<br />
+Price per Card:
+@((double)Model.Price/Model.NumCards)
+<br />
+<br />
+@using (Html.BeginForm())
+{
+    <div>
+        Amount: <input type="text" name="numPacks" class="text-right" />
+    </div>
+    <br />
+    <div>
+        <input type="submit" value="Buy Pack(s)" class="btn btn-default" />
+    </div>
+}
+

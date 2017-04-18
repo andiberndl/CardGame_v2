@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Error";
+}
+
+<h2>Error</h2>
+
+Sorry, there has been an Error.
+
+@{
+    if (User.Identity.Name == "")
+    {
+        <div>@Html.ActionLink("Return to Home", "Index", "Home")</div>
+    }
+    else
+    {
+        <div>@Html.ActionLink("Return to Shop", "Index", "Shop", null, null)</div>
+        <div>@Html.ActionLink("Return to Profile", "Index", "Profile", null, null)</div>
+    }
+}
+

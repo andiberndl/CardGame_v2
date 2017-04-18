@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Card>
+
+<table class="table table-fixed">
+    <thead>
+        <tr>
+            <th class="col-xs-6">@Html.DisplayNameFor(c => c.CardName)</th>
+            <th class="col-xs-2">@Html.DisplayNameFor(c => c.Type)</th>
+            <th class="col-xs-1">@Html.DisplayNameFor(c => c.Mana)</th>
+            <th class="col-xs-1">@Html.DisplayNameFor(c => c.Attack)</th>
+            <th class="col-xs-1">@Html.DisplayNameFor(c => c.Life)</th>
+            <th class="col-xs-1"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var card in Model)
+        {
+            <tr>
+                <td class="col-xs-6">@Html.DisplayFor(c => card.CardName)</td>
+                <td class="col-xs-2">@Html.DisplayFor(c => card.Type)</td>
+                <td class="col-xs-1">@Html.DisplayFor(c => card.Mana)</td>
+                <td class="col-xs-1">@Html.DisplayFor(c => card.Attack)</td>
+                <td class="col-xs-1">@Html.DisplayFor(c => card.Life)</td>
+                <td class="col-xs-1">o</td>
+            </tr>
+        }
+    </tbody>
+</table>

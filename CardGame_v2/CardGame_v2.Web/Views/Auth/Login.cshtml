@@ -1,0 +1,20 @@
+﻿@model UserLogin
+
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(u => u.Email)
+    @Html.EditorFor(u => u.Email)
+    <br />
+    @Html.LabelFor(u => u.Password)
+    @Html.EditorFor(u => u.Password)
+    <br />
+    <input type="submit" class="btn btn-default" />
+}
+
+@Html.ActionLink("Create Account", "Register")

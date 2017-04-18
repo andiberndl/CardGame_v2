@@ -1,0 +1,1951 @@
+<Xcpt>
+  <Time>18.04.2017 08:39:43</Time>
+  <Exception>
+    <Source>EntityFramework</Source>
+    <Message>The underlying provider failed on Open.</Message>
+    <Stack>   bei System.Data.Entity.Core.EntityClient.EntityConnection.Open()
+   bei System.Data.Entity.Core.Objects.ObjectContext.EnsureConnection(Boolean shouldMonitorTransactions)
+   bei System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   bei System.Data.Entity.Core.Objects.ObjectQuery`1.&lt;&gt;c__DisplayClass7.&lt;GetResults&gt;b__5()
+   bei System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   bei System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   bei System.Data.Entity.Core.Objects.ObjectQuery`1.&lt;System.Collections.Generic.IEnumerable&lt;T&gt;.GetEnumerator&gt;b__0()
+   bei System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   bei System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   bei System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.&lt;GetElementFunction&gt;b__3[TResult](IEnumerable`1 sequence)
+   bei System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   bei System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   bei System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   bei System.Linq.Queryable.Any[TSource](IQueryable`1 source, Expression`1 predicate)
+   bei CardGame_v2.DAL.Logic.AuthManager.Register(tblUser regUser) in E:\LAP\CardGame_Palkovics\CardGame_v2\CardGame_v2.DAL\Logic\AuthManager.cs:Zeile 19.</Stack>
+    <InnerException>
+      <Source>.Net SqlClient Data Provider</Source>
+      <Message>Netzwerkbezogener oder instanzspezifischer Fehler beim Herstellen einer Verbindung mit SQL Server. Der Server wurde nicht gefunden, oder auf ihn kann nicht zugegriffen werden. Überprüfen Sie, ob der Instanzname richtig ist und ob SQL Server Remoteverbindungen zulässt. (provider: SQL Network Interfaces, error: 26 - Fehler beim Bestimmen des angegebenen Servers/der angegebenen Instanz)</Message>
+      <Stack>   bei System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   bei System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   bei System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   bei System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   bei System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   bei System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   bei System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   bei System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal&amp; connection)
+   bei System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   bei System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   bei System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   bei System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   bei System.Data.SqlClient.SqlConnection.Open()
+   bei System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.&lt;Open&gt;b__36(DbConnection t, DbConnectionInterceptionContext c)
+   bei System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext](TTarget target, Action`2 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   bei System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.Open(DbConnection connection, DbInterceptionContext interceptionContext)
+   bei System.Data.Entity.Core.EntityClient.EntityConnection.&lt;Open&gt;b__2()
+   bei System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.&lt;&gt;c__DisplayClass1.&lt;Execute&gt;b__0()
+   bei System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   bei System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute(Action operation)
+   bei System.Data.Entity.Core.EntityClient.EntityConnection.Open()</Stack>
+    </InnerException>
+  </Exception>
+</Xcpt>
+<Xcpt>
+  <Time>18.04.2017 08:39:43</Time>
+  <Exception>
+    <Source>EntityFramework</Source>
+    <Message>The underlying provider failed on Open.</Message>
+    <Stack>   bei System.Data.Entity.Core.EntityClient.EntityConnection.Open()
+   bei System.Data.Entity.Core.Objects.ObjectContext.EnsureConnection(Boolean shouldMonitorTransactions)
+   bei System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   bei System.Data.Entity.Core.Objects.ObjectQuery`1.&lt;&gt;c__DisplayClass7.&lt;GetResults&gt;b__5()
+   bei System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   bei System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   bei System.Data.Entity.Core.Objects.ObjectQuery`1.&lt;System.Collections.Generic.IEnumerable&lt;T&gt;.GetEnumerator&gt;b__0()
+   bei System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   bei System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   bei System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   bei CardGame_v2.DAL.Logic.UserManager..cctor() in E:\LAP\CardGame_Palkovics\CardGame_v2\CardGame_v2.DAL\Logic\UserManager.cs:Zeile 29.</Stack>
+    <InnerException>
+      <Source>.Net SqlClient Data Provider</Source>
+      <Message>Netzwerkbezogener oder instanzspezifischer Fehler beim Herstellen einer Verbindung mit SQL Server. Der Server wurde nicht gefunden, oder auf ihn kann nicht zugegriffen werden. Überprüfen Sie, ob der Instanzname richtig ist und ob SQL Server Remoteverbindungen zulässt. (provider: SQL Network Interfaces, error: 26 - Fehler beim Bestimmen des angegebenen Servers/der angegebenen Instanz)</Message>
+      <Stack>   bei System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   bei System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   bei System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal&amp; connection)
+   bei System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   bei System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   bei System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   bei System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   bei System.Data.SqlClient.SqlConnection.Open()
+   bei System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.&lt;Open&gt;b__36(DbConnection t, DbConnectionInterceptionContext c)
+   bei System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext](TTarget target, Action`2 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   bei System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.Open(DbConnection connection, DbInterceptionContext interceptionContext)
+   bei System.Data.Entity.Core.EntityClient.EntityConnection.&lt;Open&gt;b__2()
+   bei System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.&lt;&gt;c__DisplayClass1.&lt;Execute&gt;b__0()
+   bei System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   bei System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute(Action operation)
+   bei System.Data.Entity.Core.EntityClient.EntityConnection.Open()</Stack>
+    </InnerException>
+  </Exception>
+</Xcpt>
+<Xcpt>
+  <Time>18.04.2017 08:39:44</Time>
+  <Exception>
+    <Source>EntityFramework</Source>
+    <Message>The underlying provider failed on Open.</Message>
+    <Stack>   bei System.Data.Entity.Core.EntityClient.EntityConnection.Open()
+   bei System.Data.Entity.Core.Objects.ObjectContext.EnsureConnection(Boolean shouldMonitorTransactions)
+   bei System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   bei System.Data.Entity.Core.Objects.ObjectQuery`1.&lt;&gt;c__DisplayClass7.&lt;GetResults&gt;b__5()
+   bei System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   bei System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   bei System.Data.Entity.Core.Objects.ObjectQuery`1.&lt;System.Collections.Generic.IEnumerable&lt;T&gt;.GetEnumerator&gt;b__0()
+   bei System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   bei System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   bei System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.&lt;GetElementFunction&gt;b__1[TResult](IEnumerable`1 sequence)
+   bei System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   bei System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   bei System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   bei System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source)
+   bei CardGame_v2.DAL.Logic.UserManager.GetUserByEmail(String email) in E:\LAP\CardGame_Palkovics\CardGame_v2\CardGame_v2.DAL\Logic\UserManager.cs:Zeile 70.</Stack>
+    <InnerException>
+      <Source>.Net SqlClient Data Provider</Source>
+      <Message>Netzwerkbezogener oder instanzspezifischer Fehler beim Herstellen einer Verbindung mit SQL Server. Der Server wurde nicht gefunden, oder auf ihn kann nicht zugegriffen werden. Überprüfen Sie, ob der Instanzname richtig ist und ob SQL Server Remoteverbindungen zulässt. (provider: SQL Network Interfaces, error: 26 - Fehler beim Bestimmen des angegebenen Servers/der angegebenen Instanz)</Message>
+      <Stack>   bei System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   bei System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   bei System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal&amp; connection)
+   bei System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   bei System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   bei System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   bei System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   bei System.Data.SqlClient.SqlConnection.Open()
+   bei System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.&lt;Open&gt;b__36(DbConnection t, DbConnectionInterceptionContext c)
+   bei System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext](TTarget target, Action`2 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   bei System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.Open(DbConnection connection, DbInterceptionContext interceptionContext)
+   bei System.Data.Entity.Core.EntityClient.EntityConnection.&lt;Open&gt;b__2()
+   bei System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.&lt;&gt;c__DisplayClass1.&lt;Execute&gt;b__0()
+   bei System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   bei System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute(Action operation)
+   bei System.Data.Entity.Core.EntityClient.EntityConnection.Open()</Stack>
+    </InnerException>
+  </Exception>
+</Xcpt>
+<Xcpt>
+  <Time>18.04.2017 08:42:35</Time>
+  <Exception>
+    <Source>EntityFramework</Source>
+    <Message>The underlying provider failed on Open.</Message>
+    <Stack>   bei System.Data.Entity.Core.EntityClient.EntityConnection.Open()
+   bei System.Data.Entity.Core.Objects.ObjectContext.EnsureConnection(Boolean shouldMonitorTransactions)
+   bei System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   bei System.Data.Entity.Core.Objects.ObjectQuery`1.&lt;&gt;c__DisplayClass7.&lt;GetResults&gt;b__5()
+   bei System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   bei System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   bei System.Data.Entity.Core.Objects.ObjectQuery`1.&lt;System.Collections.Generic.IEnumerable&lt;T&gt;.GetEnumerator&gt;b__0()
+   bei System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   bei System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   bei System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.&lt;GetElementFunction&gt;b__3[TResult](IEnumerable`1 sequence)
+   bei System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   bei System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   bei System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   bei System.Linq.Queryable.Any[TSource](IQueryable`1 source, Expression`1 predicate)
+   bei CardGame_v2.DAL.Logic.AuthManager.Register(tblUser regUser) in E:\LAP\CardGame_Palkovics\CardGame_v2\CardGame_v2.DAL\Logic\AuthManager.cs:Zeile 19.</Stack>
+    <InnerException>
+      <Source>.Net SqlClient Data Provider</Source>
+      <Message>Netzwerkbezogener oder instanzspezifischer Fehler beim Herstellen einer Verbindung mit SQL Server. Der Server wurde nicht gefunden, oder auf ihn kann nicht zugegriffen werden. Überprüfen Sie, ob der Instanzname richtig ist und ob SQL Server Remoteverbindungen zulässt. (provider: SQL Network Interfaces, error: 26 - Fehler beim Bestimmen des angegebenen Servers/der angegebenen Instanz)</Message>
+      <Stack>   bei System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   bei System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   bei System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   bei System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   bei System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   bei System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   bei System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   bei System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal&amp; connection)
+   bei System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   bei System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   bei System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   bei System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   bei System.Data.SqlClient.SqlConnection.Open()
+   bei System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.&lt;Open&gt;b__36(DbConnection t, DbConnectionInterceptionContext c)
+   bei System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext](TTarget target, Action`2 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   bei System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.Open(DbConnection connection, DbInterceptionContext interceptionContext)
+   bei System.Data.Entity.Core.EntityClient.EntityConnection.&lt;Open&gt;b__2()
+   bei System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.&lt;&gt;c__DisplayClass1.&lt;Execute&gt;b__0()
+   bei System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   bei System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute(Action operation)
+   bei System.Data.Entity.Core.EntityClient.EntityConnection.Open()</Stack>
+    </InnerException>
+  </Exception>
+</Xcpt>
+<Xcpt>
+  <Time>18.04.2017 08:42:35</Time>
+  <Exception>
+    <Source>EntityFramework</Source>
+    <Message>The underlying provider failed on Open.</Message>
+    <Stack>   bei System.Data.Entity.Core.EntityClient.EntityConnection.Open()
+   bei System.Data.Entity.Core.Objects.ObjectContext.EnsureConnection(Boolean shouldMonitorTransactions)
+   bei System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   bei System.Data.Entity.Core.Objects.ObjectQuery`1.&lt;&gt;c__DisplayClass7.&lt;GetResults&gt;b__5()
+   bei System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   bei System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   bei System.Data.Entity.Core.Objects.ObjectQuery`1.&lt;System.Collections.Generic.IEnumerable&lt;T&gt;.GetEnumerator&gt;b__0()
+   bei System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   bei System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   bei System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   bei CardGame_v2.DAL.Logic.UserManager..cctor() in E:\LAP\CardGame_Palkovics\CardGame_v2\CardGame_v2.DAL\Logic\UserManager.cs:Zeile 29.</Stack>
+    <InnerException>
+      <Source>.Net SqlClient Data Provider</Source>
+      <Message>Netzwerkbezogener oder instanzspezifischer Fehler beim Herstellen einer Verbindung mit SQL Server. Der Server wurde nicht gefunden, oder auf ihn kann nicht zugegriffen werden. Überprüfen Sie, ob der Instanzname richtig ist und ob SQL Server Remoteverbindungen zulässt. (provider: SQL Network Interfaces, error: 26 - Fehler beim Bestimmen des angegebenen Servers/der angegebenen Instanz)</Message>
+      <Stack>   bei System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   bei System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   bei System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal&amp; connection)
+   bei System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   bei System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   bei System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   bei System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   bei System.Data.SqlClient.SqlConnection.Open()
+   bei System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.&lt;Open&gt;b__36(DbConnection t, DbConnectionInterceptionContext c)
+   bei System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext](TTarget target, Action`2 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   bei System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.Open(DbConnection connection, DbInterceptionContext interceptionContext)
+   bei System.Data.Entity.Core.EntityClient.EntityConnection.&lt;Open&gt;b__2()
+   bei System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.&lt;&gt;c__DisplayClass1.&lt;Execute&gt;b__0()
+   bei System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   bei System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute(Action operation)
+   bei System.Data.Entity.Core.EntityClient.EntityConnection.Open()</Stack>
+    </InnerException>
+  </Exception>
+</Xcpt>
+<Xcpt>
+  <Time>18.04.2017 08:42:35</Time>
+  <Exception>
+    <Source>EntityFramework</Source>
+    <Message>The underlying provider failed on Open.</Message>
+    <Stack>   bei System.Data.Entity.Core.EntityClient.EntityConnection.Open()
+   bei System.Data.Entity.Core.Objects.ObjectContext.EnsureConnection(Boolean shouldMonitorTransactions)
+   bei System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   bei System.Data.Entity.Core.Objects.ObjectQuery`1.&lt;&gt;c__DisplayClass7.&lt;GetResults&gt;b__5()
+   bei System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   bei System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   bei System.Data.Entity.Core.Objects.ObjectQuery`1.&lt;System.Collections.Generic.IEnumerable&lt;T&gt;.GetEnumerator&gt;b__0()
+   bei System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   bei System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   bei System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.&lt;GetElementFunction&gt;b__1[TResult](IEnumerable`1 sequence)
+   bei System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   bei System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   bei System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   bei System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source)
+   bei CardGame_v2.DAL.Logic.UserManager.GetUserByEmail(String email) in E:\LAP\CardGame_Palkovics\CardGame_v2\CardGame_v2.DAL\Logic\UserManager.cs:Zeile 70.</Stack>
+    <InnerException>
+      <Source>.Net SqlClient Data Provider</Source>
+      <Message>Netzwerkbezogener oder instanzspezifischer Fehler beim Herstellen einer Verbindung mit SQL Server. Der Server wurde nicht gefunden, oder auf ihn kann nicht zugegriffen werden. Überprüfen Sie, ob der Instanzname richtig ist und ob SQL Server Remoteverbindungen zulässt. (provider: SQL Network Interfaces, error: 26 - Fehler beim Bestimmen des angegebenen Servers/der angegebenen Instanz)</Message>
+      <Stack>   bei System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   bei System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   bei System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal&amp; connection)
+   bei System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   bei System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   bei System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   bei System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   bei System.Data.SqlClient.SqlConnection.Open()
+   bei System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.&lt;Open&gt;b__36(DbConnection t, DbConnectionInterceptionContext c)
+   bei System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext](TTarget target, Action`2 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   bei System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.Open(DbConnection connection, DbInterceptionContext interceptionContext)
+   bei System.Data.Entity.Core.EntityClient.EntityConnection.&lt;Open&gt;b__2()
+   bei System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.&lt;&gt;c__DisplayClass1.&lt;Execute&gt;b__0()
+   bei System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   bei System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute(Action operation)
+   bei System.Data.Entity.Core.EntityClient.EntityConnection.Open()</Stack>
+    </InnerException>
+  </Exception>
+</Xcpt>
+<Info>
+  <Time>18.04.2017 08:48:13</Time>
+  <Info>AddedUser</Info>
+</Info>
+<Xcpt>
+  <Time>18.04.2017 08:48:14</Time>
+  <Exception>
+    <Source>EntityFramework</Source>
+    <Message>Fehler bei der Überprüfung einer oder mehrerer Entitäten. Weitere Informationen finden Sie in den Erläuterungen zur EntityValidationErrors-Eigenschaft.</Message>
+    <Stack>   bei System.Data.Entity.Internal.InternalContext.SaveChanges()
+   bei System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   bei System.Data.Entity.DbContext.SaveChanges()
+   bei CardGame_v2.DAL.Logic.DeckManager.AddDeckByUserId(Int32 id, String name) in E:\LAP\CardGame_Palkovics\CardGame_v2\CardGame_v2.DAL\Logic\DeckManager.cs:Zeile 150.</Stack>
+  </Exception>
+</Xcpt>
+<Xcpt>
+  <Time>18.04.2017 08:48:14</Time>
+  <Exception>
+    <Source>EntityFramework</Source>
+    <Message>Fehler bei der Überprüfung einer oder mehrerer Entitäten. Weitere Informationen finden Sie in den Erläuterungen zur EntityValidationErrors-Eigenschaft.</Message>
+    <Stack>   bei System.Data.Entity.Internal.InternalContext.SaveChanges()
+   bei System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   bei System.Data.Entity.DbContext.SaveChanges()
+   bei CardGame_v2.DAL.Logic.DeckManager.AddDeckByUserId(Int32 id, String name) in E:\LAP\CardGame_Palkovics\CardGame_v2\CardGame_v2.DAL\Logic\DeckManager.cs:Zeile 150.</Stack>
+  </Exception>
+</Xcpt>
+<Xcpt>
+  <Time>18.04.2017 08:48:14</Time>
+  <Exception>
+    <Source>EntityFramework</Source>
+    <Message>Fehler bei der Überprüfung einer oder mehrerer Entitäten. Weitere Informationen finden Sie in den Erläuterungen zur EntityValidationErrors-Eigenschaft.</Message>
+    <Stack>   bei System.Data.Entity.Internal.InternalContext.SaveChanges()
+   bei System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   bei System.Data.Entity.DbContext.SaveChanges()
+   bei CardGame_v2.DAL.Logic.DeckManager.AddDeckByUserId(Int32 id, String name) in E:\LAP\CardGame_Palkovics\CardGame_v2\CardGame_v2.DAL\Logic\DeckManager.cs:Zeile 150.</Stack>
+  </Exception>
+</Xcpt>
+<Info>
+  <Time>18.04.2017 08:48:57</Time>
+  <Info>Entered Pass=123user!</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:48:57</Time>
+  <Info>Hashed Pass=6A32B7AAEFF81811901CC6F3CD2A674CA4A23BFA1E817B292BCCFAD061E46B32AA8D7A655A87E7068E722D158AF1AE81C29E710486E068DF80D8CAE48FF7C543</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:49:59</Time>
+  <Info>id: 4</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:49:59</Time>
+  <Info>numPacks: 10</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>vID: 45</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 19</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 26</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 43</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 3</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 31</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 1</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 22</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 9</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 5</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 17</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 8</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 28</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 10</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 3</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 1</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 44</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 6</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 13</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 42</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 34</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 20</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 3</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 29</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 9</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 15</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 25</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 13</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 3</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 43</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 34</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 1</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 19</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 13</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 32</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 19</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 23</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 10</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 33</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 35</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 44</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 18</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 8</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 3</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 30</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 24</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 43</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 31</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 4</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 7</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 43</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 11</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 29</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 39</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 19</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 33</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 16</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 42</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 35</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 33</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 6</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 33</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 20</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 11</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 16</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 17</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 33</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 15</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 22</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 29</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 22</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:09</Time>
+  <Info>Card: 34</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 17</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 22</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 42</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 17</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 13</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 1</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 43</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 30</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 16</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 39</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 10</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 41</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 44</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 24</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 17</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 25</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 39</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 44</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 3</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 25</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 20</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 1</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 30</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 12</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 42</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 41</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 32</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 14</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 36</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 28</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 9</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 20</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 29</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 9</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 38</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 7</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 41</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 3</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 21</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 16</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 43</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 6</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 17</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 12</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 24</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 24</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 12</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 36</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 44</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 8</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 21</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 23</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 26</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 42</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 15</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 17</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 37</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 31</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 19</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 16</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 13</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 29</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 38</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 32</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 30</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 34</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 13</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 35</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 30</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 10</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 28</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 37</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 23</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 32</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 26</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 14</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 28</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 19</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 33</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 19</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 30</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 40</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 14</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 28</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 8</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 31</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 39</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 31</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 38</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 22</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 15</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 11</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 28</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 5</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 3</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 14</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 12</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 29</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 26</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 34</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 12</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 21</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 7</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 35</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 24</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 29</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 44</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 38</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 16</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 1</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 33</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 19</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 42</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 1</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 30</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 17</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 15</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 11</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 24</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 44</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 39</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 26</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 41</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 8</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 40</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 18</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 9</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 19</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:50:10</Time>
+  <Info>Card: 30</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:56:20</Time>
+  <Info>Entered Pass=123user!</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 08:56:20</Time>
+  <Info>Hashed Pass=6A32B7AAEFF81811901CC6F3CD2A674CA4A23BFA1E817B292BCCFAD061E46B32AA8D7A655A87E7068E722D158AF1AE81C29E710486E068DF80D8CAE48FF7C543</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 09:08:03</Time>
+  <Info>Entered Pass=123user!</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 09:08:03</Time>
+  <Info>Hashed Pass=6A32B7AAEFF81811901CC6F3CD2A674CA4A23BFA1E817B292BCCFAD061E46B32AA8D7A655A87E7068E722D158AF1AE81C29E710486E068DF80D8CAE48FF7C543</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:23</Time>
+  <Info>AddedUser</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:26</Time>
+  <Info>Entered Pass=123user!</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:26</Time>
+  <Info>Hashed Pass=F980C88E27843F0ED08907C79C79EB65D43A680E662D8C55261235C8515F827613C0CFCEA6D76862D21DF9CF7496AF3376B16F5E9D4218C6BC2DF49C5EC2B79C</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:42</Time>
+  <Info>id: 4</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:42</Time>
+  <Info>numPacks: 10</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:44</Time>
+  <Info>vID: 367</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 352</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 99</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 230</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 33</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 58</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 362</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 285</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 142</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 182</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 180</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 90</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 225</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 24</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 169</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 230</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 56</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 11</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 286</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 53</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 163</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 228</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 322</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 158</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 89</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 157</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 340</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 57</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 286</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 107</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 101</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 53</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 159</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 365</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 189</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 370</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 252</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 105</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 289</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 88</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 217</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 332</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 367</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 114</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 32</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 87</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 141</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 348</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 314</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 381</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 153</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 305</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 178</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 231</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 339</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 30</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 30</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 325</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 141</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 259</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 98</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 304</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 380</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 36</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 78</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 128</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 316</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 241</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 217</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 180</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 360</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 333</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 102</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 198</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 218</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 212</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 243</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 209</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 126</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 3</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 15</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 375</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 126</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 286</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 337</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 179</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 257</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 306</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 25</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 161</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 340</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 309</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 347</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 32</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 372</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 293</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 333</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 331</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 36</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 286</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 156</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 280</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 132</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 136</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 21</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 200</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 204</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 361</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 13</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 130</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 170</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 204</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 200</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 138</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 244</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 105</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 181</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 92</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 79</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:45</Time>
+  <Info>Card: 282</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 250</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 9</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 218</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 58</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 220</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 51</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 369</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 72</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 209</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 305</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 259</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 293</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 175</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 221</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 231</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 118</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 243</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 371</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 264</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 139</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 358</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 279</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 293</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 277</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 373</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 139</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 110</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 210</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 170</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 266</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 114</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 239</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 251</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 135</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 36</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 146</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 62</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 73</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 296</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 354</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 214</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 131</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 155</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 88</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 251</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 256</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 29</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 362</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 288</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 129</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 243</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 192</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 212</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 324</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 306</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 355</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 96</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 323</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 67</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 81</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 323</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 161</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 286</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 323</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 193</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 19</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 42</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 40</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 186</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 85</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 55</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 172</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 73</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 293</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 305</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 227</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 127</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 206</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 26</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 117</Info>
+</Info>
+<Info>
+  <Time>18.04.2017 14:58:46</Time>
+  <Info>Card: 111</Info>
+</Info>
