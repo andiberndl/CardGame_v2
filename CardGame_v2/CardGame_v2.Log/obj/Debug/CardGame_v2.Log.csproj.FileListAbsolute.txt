@@ -21,3 +21,8 @@ E:\LAP\CardGame_Palkovics\CardGame_v2\CardGame_v2.Log\bin\Debug\CardGame_v2.Log.
 E:\LAP\CardGame_Palkovics\CardGame_v2\CardGame_v2.Log\obj\Debug\CardGame_v2.Log.csprojResolveAssemblyReference.cache
 E:\LAP\CardGame_Palkovics\CardGame_v2\CardGame_v2.Log\obj\Debug\CardGame_v2.Log.dll
 E:\LAP\CardGame_Palkovics\CardGame_v2\CardGame_v2.Log\obj\Debug\CardGame_v2.Log.pdb
+C:\Users\AndiVM\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.Log\bin\Debug\CardGame_v2.Log.dll
+C:\Users\AndiVM\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.Log\bin\Debug\CardGame_v2.Log.pdb
+C:\Users\AndiVM\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.Log\obj\Debug\CardGame_v2.Log.csprojResolveAssemblyReference.cache
+C:\Users\AndiVM\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.Log\obj\Debug\CardGame_v2.Log.dll
+C:\Users\AndiVM\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.Log\obj\Debug\CardGame_v2.Log.pdb
