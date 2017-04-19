@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<Card>
 
 
-@*@foreach (var item in Model)
+@foreach (var item in Model)
 {
     <div class="col-md-4">
         @{ 
@@ -11,12 +11,12 @@
         <img class="img-responsive" src="@imgSrc" />
 
     </div>
-}*@
+}
 
 
 
 
-<table class="table">
+@*<table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(c => c.CardName)
@@ -54,7 +54,8 @@
                 @Html.DisplayFor(c => card.Life)
             </th>
         </tr>
+
     }
 
-</table>
+</table>*@
 

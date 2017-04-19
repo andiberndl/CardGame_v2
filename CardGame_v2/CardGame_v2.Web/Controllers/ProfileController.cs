@@ -46,6 +46,7 @@ namespace CardGame_v2.Web.Controllers
                 Card card = new Card();
                 card.CardID = cc.idCard;
                 card.Attack = cc.attack;
+                card.Image = cc.cardimage;
                 card.CardName = cc.cardname;
                 card.Life = cc.life;
                 card.Mana = cc.manacost;
@@ -89,6 +90,7 @@ namespace CardGame_v2.Web.Controllers
                 Card card = new Card();
                 card.CardID = cc.idCard;
                 card.Attack = cc.attack;
+                card.Image = cc.cardimage;
                 card.CardName = cc.cardname;
                 card.Life = cc.life;
                 card.Mana = cc.manacost;

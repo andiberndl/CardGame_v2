@@ -140,6 +140,7 @@ namespace CardGame_v2.Web.Controllers
                 card.CardName = c.cardname;
                 card.Type = c.tblCardType.typename;
                 card.Mana = c.manacost;
+                card.Image = c.cardimage;
                 card.Attack = c.attack;
                 card.Life = c.life;
                 cards.Add(card);
