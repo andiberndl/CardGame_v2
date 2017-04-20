@@ -26,3 +26,8 @@ C:\Users\AndiVM\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.Log\bin\Deb
 C:\Users\AndiVM\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.Log\obj\Debug\CardGame_v2.Log.csprojResolveAssemblyReference.cache
 C:\Users\AndiVM\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.Log\obj\Debug\CardGame_v2.Log.dll
 C:\Users\AndiVM\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.Log\obj\Debug\CardGame_v2.Log.pdb
+C:\Users\bernandr\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.Log\bin\Debug\CardGame_v2.Log.dll
+C:\Users\bernandr\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.Log\bin\Debug\CardGame_v2.Log.pdb
+C:\Users\bernandr\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.Log\obj\Debug\CardGame_v2.Log.csprojResolveAssemblyReference.cache
+C:\Users\bernandr\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.Log\obj\Debug\CardGame_v2.Log.dll
+C:\Users\bernandr\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.Log\obj\Debug\CardGame_v2.Log.pdb
