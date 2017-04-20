@@ -6,3 +6,134 @@
   <Time>20.04.2017 08:03:54</Time>
   <Info>Hashed Pass=F980C88E27843F0ED08907C79C79EB65D43A680E662D8C55261235C8515F827613C0CFCEA6D76862D21DF9CF7496AF3376B16F5E9D4218C6BC2DF49C5EC2B79C</Info>
 </Info>
+<Xcpt>
+  <Time>20.04.2017 08:38:47</Time>
+  <Exception>
+    <Source>EntityFramework</Source>
+    <Message>Fehler bei der Überprüfung einer oder mehrerer Entitäten. Weitere Informationen finden Sie in den Erläuterungen zur EntityValidationErrors-Eigenschaft.</Message>
+    <Stack>   bei System.Data.Entity.Internal.InternalContext.SaveChanges()
+   bei CardGame_v2.DAL.Logic.AuthManager.Register(tblUser regUser) in C:\Users\bernandr\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.DAL\Logic\AuthManager.cs:Zeile 33.</Stack>
+  </Exception>
+</Xcpt>
+<Xcpt>
+  <Time>20.04.2017 08:38:47</Time>
+  <Exception>
+    <Source>CardGame_v2.DAL</Source>
+    <Message>UserDoesNotExist</Message>
+    <Stack>   bei CardGame_v2.DAL.Logic.UserManager.GetUserByEmail(String email) in C:\Users\bernandr\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.DAL\Logic\UserManager.cs:Zeile 75.</Stack>
+  </Exception>
+</Xcpt>
+<Info>
+  <Time>20.04.2017 08:42:35</Time>
+  <Info>AddedUser</Info>
+</Info>
+<Xcpt>
+  <Time>20.04.2017 08:42:35</Time>
+  <Exception>
+    <Source>mscorlib</Source>
+    <Message>Der Index und die Länge müssen sich auf eine Position in der Zeichenfolge beziehen.
+Parametername: length</Message>
+    <Stack>   bei System.String.Substring(Int32 startIndex, Int32 length)
+   bei CardGame_v2.DAL.Logic.DeckManager.AddDefaultDecksByUserId(Int32 id) in C:\Users\bernandr\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.DAL\Logic\DeckManager.cs:Zeile 175.</Stack>
+  </Exception>
+</Xcpt>
+<Info>
+  <Time>20.04.2017 09:43:20</Time>
+  <Info>Entered Pass=123user!</Info>
+</Info>
+<Info>
+  <Time>20.04.2017 09:43:20</Time>
+  <Info>Hashed Pass=F980C88E27843F0ED08907C79C79EB65D43A680E662D8C55261235C8515F827613C0CFCEA6D76862D21DF9CF7496AF3376B16F5E9D4218C6BC2DF49C5EC2B79C</Info>
+</Info>
+<Info>
+  <Time>20.04.2017 09:43:33</Time>
+  <Info>id: 4</Info>
+</Info>
+<Info>
+  <Time>20.04.2017 09:43:33</Time>
+  <Info>numPacks: 1</Info>
+</Info>
+<Info>
+  <Time>20.04.2017 09:43:35</Time>
+  <Info>vID: 367</Info>
+</Info>
+<Info>
+  <Time>20.04.2017 09:43:35</Time>
+  <Info>Card: 359</Info>
+</Info>
+<Info>
+  <Time>20.04.2017 09:43:35</Time>
+  <Info>Card: 191</Info>
+</Info>
+<Info>
+  <Time>20.04.2017 09:43:35</Time>
+  <Info>Card: 117</Info>
+</Info>
+<Info>
+  <Time>20.04.2017 09:43:35</Time>
+  <Info>Card: 375</Info>
+</Info>
+<Info>
+  <Time>20.04.2017 09:43:35</Time>
+  <Info>Card: 26</Info>
+</Info>
+<Info>
+  <Time>20.04.2017 09:43:35</Time>
+  <Info>Card: 289</Info>
+</Info>
+<Info>
+  <Time>20.04.2017 09:43:35</Time>
+  <Info>Card: 180</Info>
+</Info>
+<Info>
+  <Time>20.04.2017 09:43:35</Time>
+  <Info>Card: 29</Info>
+</Info>
+<Info>
+  <Time>20.04.2017 09:43:35</Time>
+  <Info>Card: 266</Info>
+</Info>
+<Info>
+  <Time>20.04.2017 09:43:35</Time>
+  <Info>Card: 241</Info>
+</Info>
+<Info>
+  <Time>20.04.2017 09:43:35</Time>
+  <Info>Card: 138</Info>
+</Info>
+<Info>
+  <Time>20.04.2017 09:43:35</Time>
+  <Info>Card: 48</Info>
+</Info>
+<Info>
+  <Time>20.04.2017 09:43:35</Time>
+  <Info>Card: 116</Info>
+</Info>
+<Info>
+  <Time>20.04.2017 09:43:35</Time>
+  <Info>Card: 153</Info>
+</Info>
+<Info>
+  <Time>20.04.2017 09:43:35</Time>
+  <Info>Card: 170</Info>
+</Info>
+<Info>
+  <Time>20.04.2017 09:43:35</Time>
+  <Info>Card: 353</Info>
+</Info>
+<Info>
+  <Time>20.04.2017 09:43:35</Time>
+  <Info>Card: 87</Info>
+</Info>
+<Info>
+  <Time>20.04.2017 09:43:35</Time>
+  <Info>Card: 41</Info>
+</Info>
+<Info>
+  <Time>20.04.2017 09:43:35</Time>
+  <Info>Card: 137</Info>
+</Info>
+<Info>
+  <Time>20.04.2017 09:43:35</Time>
+  <Info>Card: 163</Info>
+</Info>
