@@ -1,14 +1,14 @@
 ﻿@{
     if (User.Identity.Name == "")
     {
-        <h1>
-            Sie sind nicht eingeloggt, bitte einloggen oder registrieren!
+        <h1 style="color:lawngreen">
+            Please login or register
         </h1>
     }
     else
     {
-        <h1>
-            Eingeloggt :-)
+        <h1 style="color:lawngreen">
+            Welcome @User.Identity.Name
         </h1>
     }
 }

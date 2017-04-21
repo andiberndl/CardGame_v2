@@ -58,7 +58,8 @@ html {
 }
 
 body {
-  margin: 0;
+    margin: 0;
+    background-image: url('img/shadowmoon-valley-2560x1600.jpg');
 }
 
 a:focus {
@@ -3953,7 +3954,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .nav-justified > li > a {
-  text-align: center;
+  /*text-align: center;*/
 }
 
 @media (min-width: 768px) {

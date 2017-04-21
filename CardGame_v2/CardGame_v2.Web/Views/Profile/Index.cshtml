@@ -4,11 +4,12 @@
     ViewBag.Title = "Index";
 }
 
-<h1>Welcome, @Model.Email</h1>
+<h1 style="color:lawngreen">Welcome, @Model.FirstName</h1>
 
-<h2>You currently have @Model.Currency credits!</h2>
+<h2 style="color:lawngreen">You currently have @Model.Currency rubys
+    <img style="height:25px" src="~/Content/img/rupeeee1.gif" />!</h2>
 
-<h2>Your Details</h2>
+<h2 style="color:lawngreen">Your Details</h2>
 @Html.DisplayNameFor(up => up.FirstName):
 @Html.DisplayFor(up => up.FirstName)
 <br />
@@ -18,13 +19,13 @@
 @Html.DisplayNameFor(up => up.Email):
 @Html.DisplayFor(up => up.Email)
 <br />
-<h3>@Html.ActionLink("Cards Owned","CardCollection")</h3>
+<h3 style="color:lawngreen">@Html.ActionLink("Cards Owned","CardCollection", null, new { @style = "color:#7cfc00" })</h3>
 @Html.DisplayNameFor(up => up.NumDistinctCardsOwned):
 @Html.DisplayFor(up => up.NumDistinctCardsOwned)
 <br />
 @Html.DisplayNameFor(up => up.NumTotalCardsOwned):
 @Html.DisplayFor(up => up.NumTotalCardsOwned)
-<h3>@Html.ActionLink("Decks Owned", "DeckOverview")</h3>
+<h3>@Html.ActionLink("Decks Owned", "DeckOverview",null, new { @style = "color:#7cfc00" })</h3>
 @Html.DisplayNameFor(up => up.NumDecksOwned):
 @Html.DisplayFor(up => up.NumDecksOwned)
 

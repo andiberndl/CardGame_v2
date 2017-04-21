@@ -4,9 +4,15 @@
     ViewBag.Title = "DeckDetails";
 }
 
+ 
 <h2>DeckDetails</h2>
 
-@Html.Partial("_CardList", Model)
+@Html.ActionLink("Edit Deck", "EditDeck", "DeckBuilder", new { id = ViewContext.RouteData.Values["id"] }, null)
+@Html.ActionLink("Back to Deck Overview", "DeckOverview")
 
-@Html.ActionLink("Edit Deck", "EditDeck","DeckBuilder", new { id = ViewContext.RouteData.Values["id"]}, null)
-@Html.ActionLink("Back to Deck Overview", "DeckOverview") 
+<div class="jumbotron row" style="background-color:transparent; height:750px; overflow:auto">
+    @Html.Partial("_CardList", Model)
+</div>
+
+
+

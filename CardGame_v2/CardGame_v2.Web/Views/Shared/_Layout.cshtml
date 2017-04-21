@@ -7,8 +7,8 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
-<body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+<body style="background-image: url('../../Content/img/shadowmoon-valley-1920x1080.jpg');">
+    <div class="navbar navbar-inverse navbar-fixed-top" style="background-color:transparent; border:0px">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -44,9 +44,8 @@
     </div>
     <div class="container body-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year by AB-F - LAP Cardgame Shop</p>
+        <footer class="navbar-fixed-bottom" >
+            <p style="color:lawngreen; float:right; padding-right:10px">&copy; @DateTime.Now.Year by AB-F - LAP Cardgame Shop</p>
         </footer>
     </div>
 
