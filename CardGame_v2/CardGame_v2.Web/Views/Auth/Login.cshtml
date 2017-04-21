@@ -6,15 +6,34 @@
 
 <h2>Login</h2>
 
-@using (Html.BeginForm())
-{
-    @Html.LabelFor(u => u.Email)
-    @Html.EditorFor(u => u.Email)
-    <br />
-    @Html.LabelFor(u => u.Password)
-    @Html.EditorFor(u => u.Password)
-    <br />
-    <input type="submit" class="btn btn-default" />
-}
+<div class="jumbotron" style="background-color:transparent">
 
-@Html.ActionLink("Create Account", "Register")
+    @using (Html.BeginForm())
+    {
+        <table>
+            <tr>
+                <td style="color:lawngreen">
+                    @Html.LabelFor(u => u.Email)
+                </td>
+                <td>
+                    @Html.EditorFor(u => u.Email)
+                </td>               
+            </tr>
+            <tr>
+                <td style="color:lawngreen">
+                    @Html.LabelFor(u => u.Password)                    
+                </td>
+                <td>
+                    @Html.EditorFor(u => u.Password)
+                </td>                
+            </tr>
+        </table>
+
+        
+      
+        <input type="submit" class="btn btn-default" />
+    }
+
+</div>
+
+@Html.ActionLink("Create Account", "Register", null, new { @style = "color:#7cfc00" })
