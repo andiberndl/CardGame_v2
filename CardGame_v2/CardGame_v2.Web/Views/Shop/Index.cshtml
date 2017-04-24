@@ -4,42 +4,42 @@
     ViewBag.Title = "Shop";
 }
 
-<h1>Welcome to the Shop!</h1>
+<h1 style="color:lawngreen">Welcome to the Shop!</h1>
 
-<h2>Available Card Packs</h2>
+<h2 style="color:lawngreen">Available Card Packs</h2>
 
 <table>
     <thead>
         <tr>
-            <td>
+            <td style="color:lawngreen">
                 Pack Name
             </td>
             @foreach (var cp in @Model.cardPacks)
             {
-                <td>
+                <td style="color:lawngreen">
                     @Html.DisplayFor(cardpack => cp.PackName)
                 </td>
             }
         </tr>
     </thead>
     <tr>
-        <td>
+        <td style="color:lawngreen">
             # Cards
         </td>
         @foreach (var cp in @Model.cardPacks)
         {
-            <td>
+            <td style="color:lawngreen">
                 @Html.DisplayFor(cardpack => cp.NumCards)
             </td>
         }
     </tr>
     <tr>
-        <td>
+        <td style="color:lawngreen">
             Price
         </td>
         @foreach (var cp in @Model.cardPacks)
         {
-            <td>
+            <td style="color:lawngreen">
                 @Html.DisplayFor(cardpack => cp.Price)
             </td>
         }
@@ -48,8 +48,8 @@
         <td></td>
         @foreach (var cp in @Model.cardPacks)
         {
-            <td>
-                @Html.ActionLink("Buy","BuyCardPack", new { id = cp.CardPackID })
+            <td style="color:lawngreen">
+                @Html.ActionLink("Buy","BuyCardPack", new { id = cp.CardPackID }, new { @style = "color:#7cfc00" })
             </td>
         }
     </tr>

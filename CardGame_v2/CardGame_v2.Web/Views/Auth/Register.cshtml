@@ -4,7 +4,7 @@
     ViewBag.Title = "Register";
 }
 <div class="jumbotron" style="background-color:transparent">
-    <h2>Register</h2>
+    <h2 style="color:lawngreen">Register</h2>
     @using (Html.BeginForm())
     {
         @Html.AntiForgeryToken()
@@ -21,17 +21,17 @@
 
             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
             <div class="form-group">
-                @Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "control-label col-md-3" })
+                @Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "control-label col-md-3", @style = "color:lawngreen"})
                 <div class="col-md-7">
-                    @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control", @style = "background-color:transparent; border:solid 1.5px; color:lawngreen" } })
                     @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
                 </div>
             </div>
 
             <div class="form-group">
-                @Html.LabelFor(model => model.LastName, htmlAttributes: new { @class = "control-label col-md-3" })
+                @Html.LabelFor(model => model.LastName, htmlAttributes: new { @class = "control-label col-md-3", @style = "color:lawngreen" })
                 <div class="col-md-7">
-                    @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control", @style = "background-color:transparent; border:solid 1.5px; color:lawngreen" } })
                     @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -45,9 +45,9 @@
                 </div>*@
 
             <div class="form-group">
-                @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-3" })
+                @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-3", @style = "color:lawngreen" })
                 <div class="col-md-7">
-                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", @style = "background-color:transparent; border:solid 1.5px; color:lawngreen" } })
                     @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -61,17 +61,17 @@
                 </div>*@
 
             <div class="form-group">
-                @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-3" })
+                @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-3", @style = "color:lawngreen" })
                 <div class="col-md-7">
-                    @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control", @style = "background-color:transparent; border:solid 1.5px; color:lawngreen" } })
                     @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
                 </div>
             </div>
 
             <div class="form-group">
-                <label class="control-label col-md-3" for="confirmPassword">Confirm Password</label>
+                <label class="control-label col-md-3" for="confirmPassword" style="color:lawngreen">Confirm Password</label>
                 <div class="col-md-7">
-                    @Html.EditorFor(model => model.PasswordValidation, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.EditorFor(model => model.PasswordValidation, new { htmlAttributes = new { @class = "form-control", @style = "background-color:transparent; border:solid 1.5px; color:lawngreen" } })
                     @Html.ValidationMessageFor(model => model.PasswordValidation, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -83,23 +83,5 @@
             </div>
         </div>
 
-
-
-
-
-
-        @*@Html.LabelFor(a => a.Email)
-            @Html.EditorFor(a => a.Email)
-            <br />
-            @Html.LabelFor(a => a.Password)
-            @Html.PasswordFor(a => a.Password)
-            <br />
-            @Html.LabelFor(a => a.FirstName)
-            @Html.EditorFor(a => a.FirstName)
-            <br />
-            @Html.LabelFor(a => a.LastName)
-            @Html.EditorFor(a => a.LastName)
-            <br />
-            <input type="submit" class="btn btn-default" />*@
     }
 </div>

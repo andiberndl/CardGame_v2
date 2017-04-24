@@ -4,7 +4,7 @@
     ViewBag.Title = "Login";
 }
 
-<h2>Login</h2>
+<h2 style="color:lawngreen">Login</h2>
 
 <div class="jumbotron" style="background-color:transparent">
 
@@ -16,7 +16,7 @@
                     @Html.LabelFor(u => u.Email)
                 </td>
                 <td>
-                    @Html.EditorFor(u => u.Email)
+                    @Html.EditorFor(u => u.Email, new { htmlAttributes = new { @style = "background-color:transparent; border:solid 1.5px; color:lawngreen" } })
                 </td>               
             </tr>
             <tr>
@@ -24,14 +24,14 @@
                     @Html.LabelFor(u => u.Password)                    
                 </td>
                 <td>
-                    @Html.EditorFor(u => u.Password)
+                    @Html.EditorFor(u => u.Password, new { htmlAttributes = new { @style = "background-color:transparent; border:solid 1.5px; color:lawngreen" } })
                 </td>                
             </tr>
         </table>
-
+        <br />
         
       
-        <input type="submit" class="btn btn-default" />
+        <input type="submit" class="btn btn-default" style="background-color:transparent; color:lawngreen; border-color:lawngreen; border:solid 1.5px" />
     }
 
 </div>

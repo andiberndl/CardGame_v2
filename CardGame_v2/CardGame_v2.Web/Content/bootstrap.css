@@ -4197,11 +4197,13 @@ textarea.input-group-sm > .input-group-btn > .btn {
   padding: 15px 15px;
   font-size: 18px;
   line-height: 20px;
+  color:lawngreen !important;
 }
 
 .navbar-brand:hover,
 .navbar-brand:focus {
   text-decoration: none;
+  color:lawngreen;
 }
 
 @media (min-width: 768px) {
@@ -4283,6 +4285,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   .navbar-nav > li > a {
     padding-top: 15px;
     padding-bottom: 15px;
+    color:lawngreen !important;
   }
 }
 
