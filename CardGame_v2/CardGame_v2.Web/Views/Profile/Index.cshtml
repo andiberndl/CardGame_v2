@@ -10,22 +10,31 @@
     <img style="height:25px" src="~/Content/img/rupeeee1.gif" />!</h2>
 
 <h2 style="color:lawngreen">Your Details</h2>
-@Html.DisplayNameFor(up => up.FirstName):
-@Html.DisplayFor(up => up.FirstName)
+<span style="color:lawngreen">
+    @Html.DisplayNameFor(up => up.FirstName):
+    @Html.DisplayFor(up => up.FirstName)
+</span>
 <br />
-@Html.DisplayNameFor(up => up.LastName):
-@Html.DisplayFor(up => up.LastName)
+<span style="color:lawngreen">
+    @Html.DisplayNameFor(up => up.LastName):
+    @Html.DisplayFor(up => up.LastName)
+</span>
 <br />
-@Html.DisplayNameFor(up => up.Email):
-@Html.DisplayFor(up => up.Email)
+<span style="color:lawngreen">
+    @Html.DisplayNameFor(up => up.Email):
+    @Html.DisplayFor(up => up.Email)
+</span>
 <br />
 <h3 style="color:lawngreen">@Html.ActionLink("Cards Owned","CardCollection", null, new { @style = "color:#7cfc00" })</h3>
-@Html.DisplayNameFor(up => up.NumDistinctCardsOwned):
-@Html.DisplayFor(up => up.NumDistinctCardsOwned)
+<span style="color:lawngreen">
+    @Html.DisplayNameFor(up => up.NumDistinctCardsOwned):
+    @Html.DisplayFor(up => up.NumDistinctCardsOwned)
+</span>
 <br />
-@Html.DisplayNameFor(up => up.NumTotalCardsOwned):
-@Html.DisplayFor(up => up.NumTotalCardsOwned)
+<span style="color:lawngreen">
+    @Html.DisplayNameFor(up => up.NumTotalCardsOwned):
+    @Html.DisplayFor(up => up.NumTotalCardsOwned)
+</span>
 <h3>@Html.ActionLink("Decks Owned", "DeckOverview",null, new { @style = "color:#7cfc00" })</h3>
-@Html.DisplayNameFor(up => up.NumDecksOwned):
-@Html.DisplayFor(up => up.NumDecksOwned)
+
 

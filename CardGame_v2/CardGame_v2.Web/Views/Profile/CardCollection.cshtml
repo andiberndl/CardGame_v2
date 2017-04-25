@@ -3,10 +3,13 @@
 @{
     ViewBag.Title = "CardCollection";
 }
+<h2 style="color:lawngreen">CardCollection</h2>
+<div class="jumbotron" style="background-color:transparent; height:750px; overflow:auto;">
 
-<h2>CardCollection</h2>
 
-@Html.Partial("_CardList", Model)
+    @Html.Partial("_CardList", Model)
 
-@Html.ActionLink("Back to Profile", "Index")
+</div>
+
+    @Html.ActionLink("Back to Profile", "Index",null, new { @style = "color:lawngreen !important" } )
 
