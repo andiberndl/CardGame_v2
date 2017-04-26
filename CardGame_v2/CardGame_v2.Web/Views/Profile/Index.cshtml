@@ -6,35 +6,41 @@
 
 <h1 style="color:lawngreen">Welcome, @Model.FirstName</h1>
 
-<h2 style="color:lawngreen">You currently have @Model.Currency rubys
-    <img style="height:25px" src="~/Content/img/rupeeee1.gif" />!</h2>
+<h2 style="color:lawngreen">
+    You currently have @Model.Currency rubys
+    <img style="height:25px" src="~/Content/img/rupeeee1.gif" />!
+</h2>
 
 <h2 style="color:lawngreen">Your Details</h2>
-<span style="color:lawngreen">
-    @Html.DisplayNameFor(up => up.FirstName):
-    @Html.DisplayFor(up => up.FirstName)
-</span>
+<ul style="color:deeppink">
+    <li>
+        @Html.DisplayNameFor(up => up.FirstName):
+        @Html.DisplayFor(up => up.FirstName)
+    </li>
+    <li style="color:deeppink">
+        @Html.DisplayNameFor(up => up.LastName):
+        @Html.DisplayFor(up => up.LastName)
+    </li>
+    <li style="color:deeppink">
+        @Html.DisplayNameFor(up => up.Email):
+        @Html.DisplayFor(up => up.Email)
+    </li>
+</ul>
 <br />
-<span style="color:lawngreen">
-    @Html.DisplayNameFor(up => up.LastName):
-    @Html.DisplayFor(up => up.LastName)
-</span>
+<h3 style="color:lawngreen">@Html.ActionLink("Cards Owned", "CardCollection", null, new { @style = "color:#7cfc00" })</h3>
+<ul>
+    <li style="color:deeppink">
+        @Html.DisplayNameFor(up => up.NumDistinctCardsOwned):
+        @Html.DisplayFor(up => up.NumDistinctCardsOwned)
+    </li>
+    <li style="color:deeppink">
+        @Html.DisplayNameFor(up => up.NumTotalCardsOwned):
+        @Html.DisplayFor(up => up.NumTotalCardsOwned)
+    </li>
+</ul>
+
 <br />
-<span style="color:lawngreen">
-    @Html.DisplayNameFor(up => up.Email):
-    @Html.DisplayFor(up => up.Email)
-</span>
-<br />
-<h3 style="color:lawngreen">@Html.ActionLink("Cards Owned","CardCollection", null, new { @style = "color:#7cfc00" })</h3>
-<span style="color:lawngreen">
-    @Html.DisplayNameFor(up => up.NumDistinctCardsOwned):
-    @Html.DisplayFor(up => up.NumDistinctCardsOwned)
-</span>
-<br />
-<span style="color:lawngreen">
-    @Html.DisplayNameFor(up => up.NumTotalCardsOwned):
-    @Html.DisplayFor(up => up.NumTotalCardsOwned)
-</span>
-<h3>@Html.ActionLink("Decks Owned", "DeckOverview",null, new { @style = "color:#7cfc00" })</h3>
+
+<h3>@Html.ActionLink("Decks Owned", "DeckOverview", null, new { @style = "color:#7cfc00" })</h3>
 
 

@@ -4,12 +4,12 @@
     ViewBag.Title = "DeckOverview";
 }
 
-<h2>DeckOverview</h2>
+<h2 style="color:lawngreen">DeckOverview</h2>
 
-<h3>You currently have @Model.ToList().Count decks</h3>
+<h3 style="color:lawngreen">Your @Model.ToList().Count decks</h3>
 <table>
     <tr>
-        <th>
+        <th style="color:lawngreen">
             @Html.DisplayNameFor(d => d.Name)
         </th>
         <th>
@@ -20,11 +20,11 @@
     @foreach (var deck in Model)
     {
         <tr>
-            <th>
-                @Html.DisplayFor(d => deck.Name)
+            <th style="color:lawngreen; padding-right:10px">
+                @Html.DisplayFor(d => deck.Name):
             </th>
-            <th>
-                @Html.ActionLink("View Deck", "DeckDetails", new { id = deck.DeckID} )
+            <th style="color:lawngreen">
+                @Html.ActionLink("View Deck", "DeckDetails", new { id = deck.DeckID}, new { @style = "color:deeppink" } )
             </th>
         </tr>
     }
