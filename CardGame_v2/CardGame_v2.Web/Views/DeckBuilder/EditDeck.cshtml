@@ -6,13 +6,24 @@
 <div class="jumbotron" style="background-color:transparent">
     <h4 style="color:lawngreen">Deckbuilder @Html.ActionLink("Return to Deck Overview", "DeckOverview", "Profile",null , new { @style = "color:deeppink" })</h4>
     <div class="row" style="height:auto">
+        
         <div class="col-lg-6" style="color:lawngreen">
             Card Collection
 
             <div class="container" style="height: 600px; overflow: auto">
-
+                @{ 
+                    int j = 0;
+                }
+            <div class="row">
                 @foreach (var item in Model.caco)
                 {
+                    if (j > 0 && j % 3 == 0)
+                    {
+                        @:</div><div class="row">
+                    }
+
+                    j++;
+
                     <div class="row col-md-4 img-responsive" style="height:auto ">
                         @{ 
                             var base64 = Convert.ToBase64String(item.Image);
@@ -24,7 +35,7 @@
                 }
             </div>
         </div>
-
+            </div>
 
 
         <!--Rechte Seite-->
@@ -33,20 +44,33 @@
             Deck
 
             <div class="container" style="height: 600px; overflow: auto">
+                @{ 
+                    int i = 0;
+                }
+                <div class="row">
+                    @foreach (var item in Model.deck)
+                    {
+                        if (i > 0 && i % 3 == 0)
+                        {
+                            @:</div><div class="row">
 
-                @foreach (var item in Model.deck)
-                {
+                        }
+                        
+                           i++;
+                       
                     <div class="row col-md-4 img-responsive" style="height:auto ">
                         @{
                             var base64 = Convert.ToBase64String(item.Image);
                             var imgSrc = String.Format("data:image/png;base64,{0}", base64);
                         }
                         <img class="img-responsive" src="@imgSrc" />
-                        <span>@Html.ActionLink("x", "RemoveCardFromDeck", new { id = Model.deck.IndexOf(item)}, new { @style = "color:#ff0000" })</span>
+                        <span>@Html.ActionLink("-", "RemoveCardFromDeck", new { id = Model.deck.IndexOf(item)}, new { @style = "color:#ff0000" })</span>
                     </div>
                }
             </div>  
-            @Html.ActionLink("Save Deck", "SaveDeck", new { id = Model.DeckID }, new { @style = "color:deeppink; float:right" })          
+                  
         </div>
+            @Html.ActionLink("Save Deck", "SaveDeck", new { id = Model.DeckID }, new { @style = "color:deeppink; float:right" })            
     </div>
 </div>
+    </div>
