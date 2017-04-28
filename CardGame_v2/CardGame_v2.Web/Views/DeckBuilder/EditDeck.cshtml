@@ -29,7 +29,7 @@
                             var base64 = Convert.ToBase64String(item.Image);
                             var imgSrc = String.Format("data:image/png;base64,{0}", base64);                            
                         }
-                        <img class="img-responsive" src="@imgSrc" />
+                        <img class="img-responsive img-thumbnail" src="@imgSrc" />
                         <span>@Html.ActionLink("+", "AddCardToDeck", new { id = Model.caco.IndexOf(item)},new {@style = "color:#00ff00" })</span>
                     </div>
                 }
@@ -63,7 +63,7 @@
                             var base64 = Convert.ToBase64String(item.Image);
                             var imgSrc = String.Format("data:image/png;base64,{0}", base64);
                         }
-                        <img class="img-responsive" src="@imgSrc" />
+                        <img class="img-responsive img-thumbnail" src="@imgSrc" />
                         <span>@Html.ActionLink("-", "RemoveCardFromDeck", new { id = Model.deck.IndexOf(item)}, new { @style = "color:#ff0000" })</span>
                     </div>
                }
