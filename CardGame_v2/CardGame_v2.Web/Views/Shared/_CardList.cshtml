@@ -1,18 +1,44 @@
 ﻿@model IEnumerable<Card>
 
 
-@foreach (var item in Model)
-{
-    <div class="col-md-2">
-        @{ 
-            var base64 = Convert.ToBase64String(item.Image);
-            var imgSrc = String.Format("data:image/png;base64,{0}", base64);
+
+<div id="searchList">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-2">
+            @{
+                var base64 = Convert.ToBase64String(item.Image);
+                var imgSrc = String.Format("data:image/png;base64,{0}", base64);
+            }
+            <img style="height:150px" class="img-responsive img-thumbnail" src="@imgSrc" />
+            <a href="#"><input type="hidden" value="@item.CardName" /></a>
+        </div>
+    }
+</div>
+
+
+
+<script>
+    function search() {
+        var input, filter, ul, li, a, i;
+        input = document.getElementById('searchInput');
+        filter = input.value.toUpperCase();
+        ul = document.getElementById('searchList');
+        li = li = ul.getElementsByTagName('div');
+
+        for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[0];
+            if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            }
+            else {
+                li[i].style.display = "none";
+            }
         }
-        <img style="height:150px" class="img-responsive img-thumbnail" src="@imgSrc" />
 
-    </div>
-}
 
+    }
+</script>
 
 
 
