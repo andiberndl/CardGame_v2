@@ -9,8 +9,8 @@ namespace CardGame_v2.Web.Models
 {
     public class UserLogin
     {
-        [Required(AllowEmptyStrings = false, ErrorMessage = "required!")]
-        [DataType(DataType.EmailAddress, ErrorMessage = "invalide mailadress")]
+        [Required(ErrorMessage = "required!", AllowEmptyStrings = false)]
+        [DataType(DataType.EmailAddress, ErrorMessage = "invalide   mailadress")]
         [DisplayName("Email")]
         public string Email { get; set; }
 
