@@ -24,7 +24,7 @@
         input = document.getElementById('searchInput');
         filter = input.value.toUpperCase();
         ul = document.getElementById('searchList');
-        li = li = ul.getElementsByTagName('div');
+        li = ul.getElementsByTagName('div');
 
         for (i = 0; i < li.length; i++) {
             a = li[i].getElementsByTagName("a")[0];
@@ -39,49 +39,4 @@
 
     }
 </script>
-
-
-
-@*<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(c => c.CardName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(c => c.Type)
-        </th>
-        <th>
-            @Html.DisplayNameFor(c => c.Mana)
-        </th>
-        <th>
-            @Html.DisplayNameFor(c => c.Attack)
-        </th>
-        <th>
-            @Html.DisplayNameFor(c => c.Life)
-        </th>
-    </tr>
-
-    @foreach (var card in Model)
-    {
-        <tr>
-            <th>
-                @Html.DisplayFor(c => card.CardName)
-            </th>
-            <th>
-                @Html.DisplayFor(c => card.Type)
-            </th>
-            <th>
-                @Html.DisplayFor(c => card.Mana)
-            </th>
-            <th>
-                @Html.DisplayFor(c => card.Attack)
-            </th>
-            <th>
-                @Html.DisplayFor(c => card.Life)
-            </th>
-        </tr>
-
-    }
-
-</table>*@
 

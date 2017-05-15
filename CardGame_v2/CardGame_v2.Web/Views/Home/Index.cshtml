@@ -22,13 +22,20 @@
 
                 <div class="carousel-inner">
                     <div class="item active">
-                        <img class="img-responsive" src="~/Content/img/1.png" />
+                        <a href='@Url.Action("Index","Shop")'>
+                            <img class="img-responsive" src='@Url.Content("~/Content/img/1.png")' />
+                        </a>
                     </div>
+
                     <div class="item">
-                        <img class="img-responsive" src="~/Content/img/2.png" />
-                    </div>
+                        <a href='@Url.Action("","")'>
+                            <img class="img-responsive" src='@Url.Content("~/Content/img/2.png")' />
+                        </a>
+                            </div>
                     <div class="item">
-                        <img class="img-responsive" src="~/Content/img/3.png" />
+                        <a href='@Url.Action("","")'>
+                            <img class="img-responsive" src="~/Content/img/3.png" />
+                        </a>
                     </div>
                 </div>
 
@@ -45,15 +52,13 @@
             </div>
         </div>
 
-
-
-
-
-
-
-
-
-
+        <div class="navbar-fixed-bottom">
+            <div class="text-center">
+                <a target="_blank" href="~/Content/img/AGB.pdf" style="color:lawngreen">AGB</a>
+                <a style="color:deeppink">|</a>
+                <a target="_blank" href="~/Content/img/Disclaimer.pdf" style="color:lawngreen">Disclaimer</a>
+            </div>
+        </div>
 
 
     }
