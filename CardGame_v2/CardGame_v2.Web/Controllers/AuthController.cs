@@ -71,26 +71,29 @@ namespace CardGame_v2.Web.Controllers
         [AllowAnonymous]
         public ActionResult Register(User regUser)
         {
-            var dbUser = new tblUser();
-
-            dbUser.firstname = regUser.FirstName;
-            dbUser.lastname = regUser.LastName;
-            
-            dbUser.userpassword = regUser.Password;
-            dbUser.email = regUser.Email;
-
-            dbUser.username = ""; //Im Moment nicht in Verwendung
-            dbUser.currency = 1000; //Jeder faengt mit 1000 Waehrung an
-
-            dbUser.fkUserRole = 2; //Jeder ist per Default ein Spieler
-
-            if (AuthManager.Register(dbUser))
+            if (ModelState.IsValid)
             {
-                int userID = UserManager.GetUserByEmail(dbUser.email).idUser;
-                if (DeckManager.AddDefaultDecksByUserId(userID))
-                    return RedirectToAction("Login");
+                var dbUser = new tblUser();
+
+                dbUser.firstname = regUser.FirstName;
+                dbUser.lastname = regUser.LastName;
+
+                dbUser.userpassword = regUser.Password;
+                dbUser.email = regUser.Email;
+
+                dbUser.username = ""; //Im Moment nicht in Verwendung
+                dbUser.currency = 1000; //Jeder faengt mit 1000 Waehrung an
+
+                dbUser.fkUserRole = 2; //Jeder ist per Default ein Spieler
+
+                if (AuthManager.Register(dbUser))
+                {
+                    int userID = UserManager.GetUserByEmail(dbUser.email).idUser;
+                    if (DeckManager.AddDefaultDecksByUserId(userID))
+                        return RedirectToAction("Login");
+                }
             }
-            return RedirectToAction("Error", "Error");
+            return RedirectToAction("Register");
         }
     }
 }

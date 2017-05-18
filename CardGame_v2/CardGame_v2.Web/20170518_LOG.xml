@@ -1,0 +1,21 @@
+<Xcpt>
+  <Time>18.05.2017 13:56:57</Time>
+  <Exception>
+    <Source>EntityFramework</Source>
+    <Message>Fehler bei der Überprüfung einer oder mehrerer Entitäten. Weitere Informationen finden Sie in den Erläuterungen zur EntityValidationErrors-Eigenschaft.</Message>
+    <Stack>   bei System.Data.Entity.Internal.InternalContext.SaveChanges()
+   bei CardGame_v2.DAL.Logic.AuthManager.Register(tblUser regUser) in C:\Users\bernandr\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.DAL\Logic\AuthManager.cs:Zeile 33.</Stack>
+  </Exception>
+</Xcpt>
+<Xcpt>
+  <Time>18.05.2017 13:56:57</Time>
+  <Exception>
+    <Source>CardGame_v2.DAL</Source>
+    <Message>UserDoesNotExist</Message>
+    <Stack>   bei CardGame_v2.DAL.Logic.UserManager.GetUserByEmail(String email) in C:\Users\bernandr\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.DAL\Logic\UserManager.cs:Zeile 75.</Stack>
+  </Exception>
+</Xcpt>
+<Info>
+  <Time>18.05.2017 14:10:53</Time>
+  <Info>AddedUser</Info>
+</Info>
