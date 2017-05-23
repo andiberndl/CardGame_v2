@@ -3,18 +3,18 @@
     ViewBag.Title = "OrderOverview";
 }
 
-<h2>OrderOverview</h2>
+<h2 style="color:deeppink">OrderOverview</h2>
 @using (Html.BeginForm())
 {
-    <div>
+    <div style="color:lawngreen">
         You want to buy @Model.Quantity @Model.Pack.PackName packs
     </div>
 
-    <div>
+    @*<div style="color:lawngreen">
         Current Balance: @Model.UserBalance
         Total Cost: @Model.Quantity x @Model.Pack.Price = @(Model.Quantity * Model.Pack.Price)
         New Balance: @(@Model.UserBalance - Model.Quantity * Model.Pack.Price)
-    </div>
+    </div>*@
     <div>
         <input type="submit" value="Buy Pack(s)" class="btn btn-default" />
     </div>

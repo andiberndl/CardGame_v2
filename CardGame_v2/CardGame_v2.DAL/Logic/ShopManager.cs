@@ -51,7 +51,7 @@ namespace CardGame_v2.DAL.Logic
             return dbCardPack;
         }
 
-        public static int GetTotalCost(int id, int numPacks)
+        public static int GetTotalCost(int id)
         {
             int price = 0;
             try
@@ -70,10 +70,10 @@ namespace CardGame_v2.DAL.Logic
             {
                 Writer.LogError(e);
             }
-            return price * numPacks;
+            return price;
         }
 
-        public static List<tblCard> Order(int id, int numPacks)
+        public static List<tblCard> Order(int id)
         {
             //3 Steps: Generate Cards, Enter into DB
             Random rng = new Random();
@@ -92,7 +92,7 @@ namespace CardGame_v2.DAL.Logic
                     }
                     int numCardsToGenerate = cardPack.numcards;
 
-                    numCardsToGenerate *= numPacks;
+                    
 
                     var validIDs = db.tblCard.Select(c => c.idCard).ToList();
 

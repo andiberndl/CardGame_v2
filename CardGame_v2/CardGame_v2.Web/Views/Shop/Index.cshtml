@@ -11,7 +11,7 @@
 <table>
     <thead>
         <tr>
-            <td style="color:lawngreen">
+            <td style="color:deeppink">
                 Pack Name
             </td>
             @foreach (var cp in @Model.cardPacks)
@@ -23,8 +23,8 @@
         </tr>
     </thead>
     <tr>
-        <td style="color:lawngreen">
-            # Cards
+        <td style="color:deeppink">
+            Amount Cards
         </td>
         @foreach (var cp in @Model.cardPacks)
         {
@@ -34,7 +34,7 @@
         }
     </tr>
     <tr>
-        <td style="color:lawngreen">
+        <td style="color:deeppink">
             Price
         </td>
         @foreach (var cp in @Model.cardPacks)
@@ -48,9 +48,18 @@
         <td></td>
         @foreach (var cp in @Model.cardPacks)
         {
-            <td style="color:lawngreen">
-                @Html.ActionLink("Buy","BuyCardPack", new { id = cp.CardPackID }, new { @style = "color:#7cfc00" })
-            </td>
+            using (Html.BeginForm("BuyCard", "Shop", FormMethod.Post))
+            {
+                <td>
+                    <input type="submit" value="Buy" />
+                    <input type="hidden" value="@cp.CardPackID" name="ID" />
+                </td>
+            }
+
+
+            @*<td style="color:lawngreen">
+                    @Html.ActionLink("Buy","BuyCard", new { id = cp.CardPackID }, new { @style = "color:#7cfc00" })
+                </td>*@
         }
     </tr>
 </table>

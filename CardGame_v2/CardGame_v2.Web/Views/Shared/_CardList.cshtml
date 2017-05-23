@@ -2,7 +2,7 @@
 
 
 
-<div id="searchList, renderMe">
+<div id="searchList">
     @foreach (var item in Model)
     {
         <div class="col-md-2">
@@ -12,7 +12,6 @@
             }
             <img style="height:150px" class="img-responsive img-thumbnail" src="@imgSrc" />
             <a href="#"><input type="hidden" value="@item.CardName" /></a>
-            <a href="#"><input type="hidden" value="@item.Mana" /></a>
         </div>
     }    
 </div>

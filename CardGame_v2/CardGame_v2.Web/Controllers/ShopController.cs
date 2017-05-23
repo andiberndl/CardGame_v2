@@ -52,10 +52,10 @@ namespace CardGame_v2.Web.Controllers
 
         [HttpPost]
         [Authorize(Roles = "player")]
-        public ActionResult BuyCardPack(int id, int numPacks)
+        public ActionResult BuyCard(int id) //,int numPacks)
         {
             Writer.LogInfo("id: " + id.ToString());
-            Writer.LogInfo("numPacks: " + numPacks.ToString());
+            //Writer.LogInfo("numPacks: " + numPacks.ToString());
 
             Order o = new Order();
             var dbCardPack = ShopManager.GetCardPackById(id);
@@ -68,7 +68,7 @@ namespace CardGame_v2.Web.Controllers
 
             o.Pack = cardPack;
 
-            o.Quantity = numPacks;
+            //o.Quantity = numPacks;
             o.UserBalance = UserManager.GetBalanceByEmail(User.Identity.Name);
 
             TempData["Order"] = o;
@@ -94,7 +94,7 @@ namespace CardGame_v2.Web.Controllers
             //Check if User has enough balance
             try
             {
-                var orderTotal = ShopManager.GetTotalCost(o.Pack.CardPackID, o.Quantity);
+                var orderTotal = ShopManager.GetTotalCost(o.Pack.CardPackID);
                 if (orderTotal > o.UserBalance)
                 {
                     return RedirectToAction("NotEnoughBalance");
@@ -108,7 +108,7 @@ namespace CardGame_v2.Web.Controllers
                 }
 
                 //Generate Cards
-                var orderedCards = ShopManager.Order(o.Pack.CardPackID, o.Quantity);
+                var orderedCards = ShopManager.Order(o.Pack.CardPackID);
 
                 //Add Cards to User Collection
                 var hasUpdatedCards = UserManager.AddCardsToCollectionByEmail(User.Identity.Name, orderedCards); 
