@@ -19,8 +19,9 @@ namespace CardGame_v2.Web.Controllers
         {
             Shop shop = new Shop();
             shop.cardPacks = new List<CardPack>();
+            shop.rubyPacks = new List<RubyPack>();
 
-            var dbCardPacks = ShopManager.GetAllCardPacks();
+            var dbCardPacks = ShopManager.GetCardPacks();
 
             foreach (var dbCp in dbCardPacks)
             {
@@ -31,6 +32,19 @@ namespace CardGame_v2.Web.Controllers
                 cardPack.Price = dbCp.packprice;
                 shop.cardPacks.Add(cardPack);
             }
+
+            var dbRubyPacks = ShopManager.GetRubyPacks();
+
+            foreach (var dbRp in dbRubyPacks)
+            {
+                RubyPack rubyPack = new RubyPack();
+                rubyPack.CardPackID = dbRp.idCardPack;
+                rubyPack.PackName = dbRp.packname;
+                rubyPack.Price = dbRp.packprice;
+                rubyPack.RubyAmount = (int)dbRp.RubyAmount;
+                shop.rubyPacks.Add(rubyPack);
+
+            } 
 
             return View(shop);
         }

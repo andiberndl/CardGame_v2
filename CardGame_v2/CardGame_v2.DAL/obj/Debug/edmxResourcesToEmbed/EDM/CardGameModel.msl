@@ -17,6 +17,7 @@
     <EntitySetMapping Name="tblCardPack">
       <EntityTypeMapping TypeName="CardGame_v2Model.tblCardPack">
         <MappingFragment StoreEntitySet="tblCardPack">
+          <ScalarProperty Name="RubyAmount" ColumnName="RubyAmount" />
           <ScalarProperty Name="idCardPack" ColumnName="idCardPack" />
           <ScalarProperty Name="packname" ColumnName="packname" />
           <ScalarProperty Name="numcards" ColumnName="numcards" />

@@ -98,3 +98,16 @@ C:\Users\bernandr\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.DAL\bin\D
 C:\Users\bernandr\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.DAL\obj\Debug\CardGame_v2.DAL.csprojResolveAssemblyReference.cache
 C:\Users\bernandr\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.DAL\obj\Debug\CardGame_v2.DAL.dll
 C:\Users\bernandr\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.DAL\obj\Debug\CardGame_v2.DAL.pdb
+C:\Users\andi\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.DAL\bin\Debug\CardGame_v2.DAL.dll.config
+C:\Users\andi\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.DAL\bin\Debug\CardGame_v2.DAL.dll
+C:\Users\andi\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.DAL\bin\Debug\CardGame_v2.DAL.pdb
+C:\Users\andi\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.DAL\bin\Debug\CardGame_v2.Log.dll
+C:\Users\andi\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.DAL\bin\Debug\EntityFramework.dll
+C:\Users\andi\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\andi\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.DAL\bin\Debug\CardGame_v2.Log.pdb
+C:\Users\andi\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.DAL\bin\Debug\EntityFramework.xml
+C:\Users\andi\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\andi\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.DAL\bin\Debug\de\EntityFramework.resources.dll
+C:\Users\andi\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.DAL\obj\Debug\CardGame_v2.DAL.csprojResolveAssemblyReference.cache
+C:\Users\andi\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.DAL\obj\Debug\CardGame_v2.DAL.dll
+C:\Users\andi\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.DAL\obj\Debug\CardGame_v2.DAL.pdb

@@ -31,6 +31,31 @@ namespace CardGame_v2.DAL.Logic
             return allCardPacks;
         }
 
+        public static List<tblCardPack> GetRubyPacks()
+        {
+            List<tblCardPack> rubyPacks = new List<tblCardPack>();
+
+            using (var db = new CardGame_v2Entities())
+            {
+                rubyPacks = db.tblCardPack.Where(rP => rP.numcards == 0).ToList();
+            }
+
+            return rubyPacks;
+        }
+
+        public static List<tblCardPack> GetCardPacks()
+        {
+            List<tblCardPack> cardPacks = new List<tblCardPack>();
+
+            using (var db = new CardGame_v2Entities())
+            {
+                cardPacks = db.tblCardPack.Where(cP => cP.numcards != 0).ToList();
+            }
+
+            return cardPacks;
+        }
+
+
         public static tblCardPack GetCardPackById(int id)
         {
             var dbCardPack = new tblCardPack();
@@ -134,5 +159,10 @@ namespace CardGame_v2.DAL.Logic
 
             return generatedCards;
         }
+
+        
+
+
+
     }
 }

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="CardGame_v2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="CardGame_v2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="tblCard">
           <Key>
             <PropertyRef Name="idCard" />
@@ -25,6 +25,7 @@
           <Property Name="packname" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="numcards" Type="int" Nullable="false" />
           <Property Name="packprice" Type="int" Nullable="false" />
+          <Property Name="RubyAmount" Type="int" />
         </EntityType>
         <EntityType Name="tblCardType">
           <Key>
@@ -246,8 +247,7 @@
             <End Role="tblVirtualPurchase" EntitySet="tblVirtualPurchase" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="CardGame_v2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -275,6 +275,7 @@
           <Property Name="numcards" Type="Int32" Nullable="false" />
           <Property Name="packprice" Type="Int32" Nullable="false" />
           <NavigationProperty Name="tblVirtualPurchase" Relationship="Self.FK_tblVirtualPurchase_tblCardPack" FromRole="tblCardPack" ToRole="tblVirtualPurchase" />
+          <Property Name="RubyAmount" Type="Int32" />
         </EntityType>
         <EntityType Name="tblCardType">
           <Key>
@@ -532,6 +533,7 @@
           <EntitySetMapping Name="tblCardPack">
             <EntityTypeMapping TypeName="CardGame_v2Model.tblCardPack">
               <MappingFragment StoreEntitySet="tblCardPack">
+                <ScalarProperty Name="RubyAmount" ColumnName="RubyAmount" />
                 <ScalarProperty Name="idCardPack" ColumnName="idCardPack" />
                 <ScalarProperty Name="packname" ColumnName="packname" />
                 <ScalarProperty Name="numcards" ColumnName="numcards" />

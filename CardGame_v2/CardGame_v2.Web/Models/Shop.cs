@@ -8,5 +8,15 @@ namespace CardGame_v2.Web.Models
     public class Shop
     {
         public List<CardPack> cardPacks { get; set; }
+        public List<RubyPack> rubyPacks { get; set; }
+
+        public Shop()
+        {
+            cardPacks = new List<CardPack>();
+            rubyPacks = new List<RubyPack>();
     }
+
+    }
+
+
 }

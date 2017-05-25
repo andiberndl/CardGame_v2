@@ -8,58 +8,173 @@
 
 <h2 style="color:lawngreen">Available Card Packs</h2>
 
-<table>
-    <thead>
-        <tr>
-            <td style="color:deeppink">
-                Pack Name
-            </td>
-            @foreach (var cp in @Model.cardPacks)
+
+<!--Card Packs-->
+<div class="row" style="color:lawngreen">
+
+
+
+    @foreach (var cp in @Model.cardPacks)
+    {
+        <div class="col-md-3" style="color:lawngreen">
+            @Html.DisplayFor(cardpack => cp.PackName)
+        </div>
+    }
+
+    @foreach (var cp in @Model.cardPacks)
+    {
+        <div class="col-md-3" style="color:lawngreen">
+            @Html.DisplayFor(cardpack => cp.Price)
+        </div>
+    }
+
+    @foreach (var cp in @Model.cardPacks)
+    {
+        <div class="col-md-3" style="color:lawngreen">
+            @Html.DisplayFor(cardpack => cp.NumCards)
+        </div>
+    }
+
+    @foreach (var cp in @Model.cardPacks)
+    {
+        using (Html.BeginForm("BuyCard", "Shop", FormMethod.Post))
+        {
+            if (CardGame_v2.DAL.Logic.UserManager.GetBalanceByEmail(User.Identity.Name) < cp.Price)
             {
-                <td style="color:lawngreen">
-                    @Html.DisplayFor(cardpack => cp.PackName)
-                </td>
-            }
-        </tr>
-    </thead>
-    <tr>
-        <td style="color:deeppink">
-            Amount Cards
-        </td>
-        @foreach (var cp in @Model.cardPacks)
-        {
-            <td style="color:lawngreen">
-                @Html.DisplayFor(cardpack => cp.NumCards)
-            </td>
-        }
-    </tr>
-    <tr>
-        <td style="color:deeppink">
-            Price
-        </td>
-        @foreach (var cp in @Model.cardPacks)
-        {
-            <td style="color:lawngreen">
-                @Html.DisplayFor(cardpack => cp.Price)
-            </td>
-        }
-    </tr>
-    <tr>
-        <td></td>
-        @foreach (var cp in @Model.cardPacks)
-        {
-            using (Html.BeginForm("BuyCard", "Shop", FormMethod.Post))
-            {
-                <td>
+                <div class="col-md-3" style="display:none">
                     <input type="submit" value="Buy" />
                     <input type="hidden" value="@cp.CardPackID" name="ID" />
-                </td>
+                </div>
+            }
+            else
+            {
+                <div class="col-md-3">
+                    <input type="submit" value="Buy" />
+                    <input type="hidden" value="@cp.CardPackID" name="ID" />
+                </div>
             }
 
-
-            @*<td style="color:lawngreen">
-                    @Html.ActionLink("Buy","BuyCard", new { id = cp.CardPackID }, new { @style = "color:#7cfc00" })
-                </td>*@
         }
-    </tr>
-</table>
+    }
+</div>
+
+
+
+<!--Ruby Packs-->
+@*<br />
+<br />
+<br />
+<div class="row" style="color:lawngreen">
+    @foreach (var item in Model.rubyPacks)
+    {
+        <div class="col-lg-4">
+            @item.PackName
+        </div>
+    }
+
+    @foreach (var item in Model.rubyPacks)
+    {
+        <div class="col-md-4">
+            @item.Price
+        </div>
+    }
+
+    @foreach (var item in Model.rubyPacks)
+    {
+        <div class="col-md-4">
+            @item.RubyAmount
+        </div>
+    }*@
+
+
+    <div class="container" style="color:lawngreen">
+        <h4 class="headline-corr">Ruby Packs</h4>
+        @for (int i = 0; i < Model.rubyPacks.Count; i++)
+        {
+            using (Html.BeginForm())
+            {
+                <div class="row col-md-4 col-sm-6 col-xs-12 pack-container">
+                    <div class="col-md-8 vcenter pack-style">
+                        <div class="container pack-style-container">
+                            <div class="row"> @Model.rubyPacks.ToList()[i].PackName </div>
+                            <div class="row"> you get @Model.rubyPacks.ToList()[i].RubyAmount Ruby</div>
+                            <div class="row pack-row-price"> @Model.rubyPacks.ToList()[i].Price <span>€</span> </div>
+                            <div class="row">
+                                <!--Hidden Field zur Übergabe der PackID + Preis -->
+                                <input type="hidden" name="IdPack" value="@Model.rubyPacks.ToList()[i].CardPackID" />
+                                <input type="hidden" name="Packprice" value="@Model.rubyPacks.ToList()[i].Price" />
+                                <input type="button" value="Buy" style="padding-top:10px; width:160px; color:black; font-weight:bold" data-toggle="modal" data-target="#myModal" />
+                                <div id="myModal" class="modal fade" role="dialog">
+                                    <div class="modal-dialog">
+                                        <!-- Modal content-->
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                <h4 class="modal-title">Buy Gold via Credit Card</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>Some text in the modal.</p>
+                                                @using (Html.BeginForm())
+                                                {
+                                                    <div class="form-horizontal">
+                                                        <div class="form-group">
+                                                            <label class="control-label col-md-4">Firstname</label>
+                                                            <div class="col-md-8">
+                                                                <input type="text" name="Firstname" value="" class="form-control" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label col-md-4">Lastname</label>
+                                                            <div class="col-md-8">
+                                                                <input type="text" name="Lastname" value="" class="form-control" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label col-md-4">Creditcardnumber</label>
+                                                            <div class="col-md-8">
+                                                                <input type="text" name="creditCardNumber" value="" class="form-control" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label col-md-4">Expire Year/Month</label>
+                                                            <div class="col-md-4">
+                                                                <input type="text" name="doeYear" value="" placeholder="YYYY" class="form-control" />
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <input type="text" name="doeMonth" value="" placeholder="MM" class="form-control" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label col-md-4">CVR</label>
+                                                            <div class="col-md-8">
+                                                                <input type="text" name="CVR" value="" class="form-control" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <input type="submit" name="cgc" value="Complete Gold Charge" />
+
+
+                                                }
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            }
+        }
+    </div>
+
+
+
+
+
+
+
+</div>

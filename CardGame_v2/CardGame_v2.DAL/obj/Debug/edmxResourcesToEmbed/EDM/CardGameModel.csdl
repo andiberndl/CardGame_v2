@@ -24,6 +24,7 @@
     <Property Name="numcards" Type="Int32" Nullable="false" />
     <Property Name="packprice" Type="Int32" Nullable="false" />
     <NavigationProperty Name="tblVirtualPurchase" Relationship="Self.FK_tblVirtualPurchase_tblCardPack" FromRole="tblCardPack" ToRole="tblVirtualPurchase" />
+    <Property Name="RubyAmount" Type="Int32" />
   </EntityType>
   <EntityType Name="tblCardType">
     <Key>

@@ -20,6 +20,7 @@
     <Property Name="packname" Type="nvarchar" MaxLength="20" Nullable="false" />
     <Property Name="numcards" Type="int" Nullable="false" />
     <Property Name="packprice" Type="int" Nullable="false" />
+    <Property Name="RubyAmount" Type="int" />
   </EntityType>
   <EntityType Name="tblCardType">
     <Key>
