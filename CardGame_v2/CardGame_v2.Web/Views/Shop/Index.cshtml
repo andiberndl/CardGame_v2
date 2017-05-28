@@ -101,7 +101,7 @@
                             <div class="row pack-row-price"> @Model.rubyPacks.ToList()[i].Price <span>€</span> </div>
                             <div class="row">
                                 <!--Hidden Field zur Übergabe der PackID + Preis -->
-                                <input type="hidden" name="IdPack" value="@Model.rubyPacks.ToList()[i].CardPackID" />
+                                <input type="hidden" name="packID" value="@Model.rubyPacks[i].CardPackID" />
                                 <input type="hidden" name="Packprice" value="@Model.rubyPacks.ToList()[i].Price" />
                                 <input type="button" value="Buy" style="padding-top:10px; width:160px; color:black; font-weight:bold" data-toggle="modal" data-target="#myModal" />
                                 <div id="myModal" class="modal fade" role="dialog">
@@ -172,9 +172,3 @@
     </div>
 
 
-
-
-
-
-
-</div>

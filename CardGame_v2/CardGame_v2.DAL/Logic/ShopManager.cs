@@ -84,7 +84,7 @@ namespace CardGame_v2.DAL.Logic
                 using (var db = new CardGame_v2Entities())
                 {
                     var pack = db.tblCardPack.Find(id);
-                    if(pack == null)
+                    if (pack == null)
                     {
                         throw new Exception("PackNotFound");
                     }
@@ -117,7 +117,7 @@ namespace CardGame_v2.DAL.Logic
                     }
                     int numCardsToGenerate = cardPack.numcards;
 
-                    
+
 
                     var validIDs = db.tblCard.Select(c => c.idCard).ToList();
 
@@ -133,7 +133,7 @@ namespace CardGame_v2.DAL.Logic
                         int indexID = rng.Next(0, validIDs.Count - 1);
                         int generatedCardID = validIDs[indexID];
                         var generatedCard = db.tblCard.Where(c => c.idCard == generatedCardID).Include(c => c.tblCardType).FirstOrDefault();
-                        
+
                         if (generatedCard == null)
                         {
                             throw new Exception("CardNotFound");
@@ -160,9 +160,49 @@ namespace CardGame_v2.DAL.Logic
             return generatedCards;
         }
 
-        
+        public static void ExecuteOrder(int personID, int packID, string creditCardNumber)
+        {
+            using (var db = new CardGame_v2Entities())
+            {
+                tblVirtualPurchase order = new tblVirtualPurchase();
+                //tblUserCardCollection col = new tblUserCardCollection();
+                //Random r = new Random();
+
+                order.fkCardPack = packID;
+                order.fkUser = personID;
+                order.timeofpurchase = DateTime.Now;
+                db.tblVirtualPurchase.Add(order);
+                db.SaveChanges();
 
 
 
+                #region Goldpacks
+
+
+                if (true)
+                {
+                    tblUser person = new tblUser();
+                    var updatePerson = (from p in db.tblUser
+                                        where p.idUser == personID
+                                        select p);
+
+                    var goldValue = (from g in db.tblCardPack
+                                     where g.idCardPack == packID
+                                     select g.RubyAmount).FirstOrDefault();
+
+                    foreach (var value in updatePerson)
+                    {
+                        value.currency += (int)goldValue;
+                    }
+                    db.SaveChanges();
+                }
+                else
+                {
+                    //was auch immer 
+                }
+
+            }
+            #endregion
+        }
     }
 }

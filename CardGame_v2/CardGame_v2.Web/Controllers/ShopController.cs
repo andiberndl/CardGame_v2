@@ -7,6 +7,7 @@ using CardGame_v2.Web.Models;
 using CardGame_v2.DAL.EDM;
 using CardGame_v2.DAL.Logic;
 using CardGame_v2.Log;
+using WindowsApplication1;
 
 namespace CardGame_v2.Web.Controllers
 {
@@ -44,10 +45,34 @@ namespace CardGame_v2.Web.Controllers
                 rubyPack.RubyAmount = (int)dbRp.RubyAmount;
                 shop.rubyPacks.Add(rubyPack);
 
-            } 
+            }
 
             return View(shop);
         }
+
+        [HttpPost]
+        [Authorize(Roles = "player,admin")]
+        public ActionResult Index(int packID, string creditCardNumber = "")
+        {
+            if (CreditCardVerification.IsValidCardNumber(creditCardNumber))
+            {
+                int userID = UserManager.GetUserByEmail(User.Identity.Name).idUser;
+                var pid = packID;
+                ShopManager.ExecuteOrder(userID, pid, creditCardNumber);
+
+                TempData["orderComplete"] = "purchase complete!";
+                return RedirectToAction("Index");
+            }
+
+            else
+            {
+                TempData["orderAbort"] = "Creditcard data wrong!";
+                return RedirectToAction("Index");
+            }
+
+        }
+
+
 
         [HttpGet]
         [Authorize(Roles = "player")]
@@ -114,10 +139,11 @@ namespace CardGame_v2.Web.Controllers
                     return RedirectToAction("NotEnoughBalance");
                 }
                 var newBalance = o.UserBalance - orderTotal;
-                
+
                 //User has enough money, subtract money
-                var hasUpdated = UserManager.UpdateBalanceByEmail(User.Identity.Name,newBalance);
-                if (!hasUpdated) {
+                var hasUpdated = UserManager.UpdateBalanceByEmail(User.Identity.Name, newBalance);
+                if (!hasUpdated)
+                {
                     return RedirectToAction("BalanceUpdateError");
                 }
 
@@ -125,7 +151,7 @@ namespace CardGame_v2.Web.Controllers
                 var orderedCards = ShopManager.Order(o.Pack.CardPackID);
 
                 //Add Cards to User Collection
-                var hasUpdatedCards = UserManager.AddCardsToCollectionByEmail(User.Identity.Name, orderedCards); 
+                var hasUpdatedCards = UserManager.AddCardsToCollectionByEmail(User.Identity.Name, orderedCards);
 
                 //evtl extra spalte in cardcollection mit fk fuer den Order machen
 
@@ -135,9 +161,9 @@ namespace CardGame_v2.Web.Controllers
             catch (Exception e)
             {
                 Writer.LogError(e);
-                return RedirectToAction("Error","Error");
+                return RedirectToAction("Error", "Error");
             }
-             
+
         }
 
         [HttpGet]
@@ -170,5 +196,6 @@ namespace CardGame_v2.Web.Controllers
         {
             return View();
         }
+
     }
 }
