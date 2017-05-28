@@ -14,6 +14,12 @@ namespace CardGame_v2.DAL.EDM
     
     public partial class tblVirtualPurchase
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public tblVirtualPurchase()
+        {
+            this.tblUserCardCollection = new HashSet<tblUserCardCollection>();
+        }
+    
         public int idVirtualPurchase { get; set; }
         public int fkUser { get; set; }
         public int fkCardPack { get; set; }
@@ -22,5 +28,7 @@ namespace CardGame_v2.DAL.EDM
     
         public virtual tblCardPack tblCardPack { get; set; }
         public virtual tblUser tblUser { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tblUserCardCollection> tblUserCardCollection { get; set; }
     }
 }

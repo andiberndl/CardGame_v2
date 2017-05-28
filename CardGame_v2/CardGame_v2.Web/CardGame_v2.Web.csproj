@@ -232,6 +232,7 @@
     <Content Include="Views\Profile\DeckDetails.cshtml" />
     <Content Include="Views\DeckBuilder\EditDeck.cshtml" />
     <Content Include="Views\Shared\_DBCardList.cshtml" />
+    <Content Include="Views\Statistics\Statistics.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

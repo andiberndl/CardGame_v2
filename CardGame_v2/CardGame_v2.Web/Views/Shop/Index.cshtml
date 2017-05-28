@@ -105,8 +105,8 @@
                                 <!--Hidden Field zur Übergabe der PackID + Preis -->
                                 <input type="hidden" name="packID" value="@Model.rubyPacks[i].CardPackID" />
                                 <input type="hidden" name="Packprice" value="@Model.rubyPacks.ToList()[i].Price" />
-                                <input type="button" value="Buy" style="padding-top:10px; width:160px; color:black; font-weight:bold" data-toggle="modal" data-target="#myModal" />
-                                <div id="myModal" class="modal fade" role="dialog">
+                                <input type="button" value="Buy" style="padding-top:10px; width:160px; color:black; font-weight:bold" data-toggle="modal" data-target="#@Model.rubyPacks[i].CardPackID" />
+                                <div id="@Model.rubyPacks[i].CardPackID" class="modal fade" role="dialog">
                                     <div class="modal-dialog">
                                         <!-- Modal content-->
                                         <div class="modal-content">

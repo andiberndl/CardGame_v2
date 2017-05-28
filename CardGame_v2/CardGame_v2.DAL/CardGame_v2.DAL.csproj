@@ -93,6 +93,15 @@
     <Compile Include="EDM\tblVirtualPurchase.cs">
       <DependentUpon>CardGameModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="EDM\vAllSoldPacks.cs">
+      <DependentUpon>CardGameModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDM\vSoldCardPacks.cs">
+      <DependentUpon>CardGameModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDM\vSoldRubyPacks.cs">
+      <DependentUpon>CardGameModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Logic\CreditCard.cs" />
     <Compile Include="Logic\DeckManager.cs" />
     <Compile Include="Logic\ShopManager.cs" />

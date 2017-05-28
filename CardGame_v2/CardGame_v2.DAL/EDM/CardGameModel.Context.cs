@@ -34,5 +34,8 @@ namespace CardGame_v2.DAL.EDM
         public virtual DbSet<tblUserCardCollection> tblUserCardCollection { get; set; }
         public virtual DbSet<tblUserRole> tblUserRole { get; set; }
         public virtual DbSet<tblVirtualPurchase> tblVirtualPurchase { get; set; }
+        public virtual DbSet<vAllSoldPacks> vAllSoldPacks { get; set; }
+        public virtual DbSet<vSoldCardPacks> vSoldCardPacks { get; set; }
+        public virtual DbSet<vSoldRubyPacks> vSoldRubyPacks { get; set; }
     }
 }

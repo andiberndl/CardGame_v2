@@ -12,15 +12,9 @@ namespace CardGame_v2.DAL.EDM
     using System;
     using System.Collections.Generic;
     
-    public partial class tblUserCardCollection
+    public partial class vSoldRubyPacks
     {
-        public int fkUser { get; set; }
-        public int fkCard { get; set; }
-        public int numcards { get; set; }
-        public Nullable<int> fkVirtualPurchase { get; set; }
-    
-        public virtual tblCard tblCard { get; set; }
-        public virtual tblUser tblUser { get; set; }
-        public virtual tblVirtualPurchase tblVirtualPurchase { get; set; }
+        public Nullable<int> count { get; set; }
+        public string packname { get; set; }
     }
 }

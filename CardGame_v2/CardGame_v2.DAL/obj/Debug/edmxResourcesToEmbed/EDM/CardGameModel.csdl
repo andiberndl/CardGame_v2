@@ -84,6 +84,8 @@
     <Property Name="numcards" Type="Int32" Nullable="false" />
     <NavigationProperty Name="tblCard" Relationship="Self.FK_tblUserCardCollection_tblCard" FromRole="tblUserCardCollection" ToRole="tblCard" />
     <NavigationProperty Name="tblUser" Relationship="Self.FK_tblUserCardCollection_tblUser" FromRole="tblUserCardCollection" ToRole="tblUser" />
+    <Property Name="fkVirtualPurchase" Type="Int32" />
+    <NavigationProperty Name="tblVirtualPurchase" Relationship="CardGame_v2Model.FK__tblUserCa__fkVir__34C8D9D1" FromRole="tblUserCardCollection" ToRole="tblVirtualPurchase" />
   </EntityType>
   <EntityType Name="tblUserRole">
     <Key>
@@ -104,6 +106,7 @@
     <Property Name="numpacks" Type="Int32" Nullable="false" />
     <NavigationProperty Name="tblCardPack" Relationship="Self.FK_tblVirtualPurchase_tblCardPack" FromRole="tblVirtualPurchase" ToRole="tblCardPack" />
     <NavigationProperty Name="tblUser" Relationship="Self.FK_tblVirtualPurchase_tblUser" FromRole="tblVirtualPurchase" ToRole="tblUser" />
+    <NavigationProperty Name="tblUserCardCollection" Relationship="CardGame_v2Model.FK__tblUserCa__fkVir__34C8D9D1" FromRole="tblVirtualPurchase" ToRole="tblUserCardCollection" />
   </EntityType>
   <Association Name="FK_tblCard_tblCardType">
     <End Role="tblCardType" Type="Self.tblCardType" Multiplicity="0..1" />
@@ -259,5 +262,45 @@
       <End Role="tblUser" EntitySet="tblUser" />
       <End Role="tblVirtualPurchase" EntitySet="tblVirtualPurchase" />
     </AssociationSet>
+    <EntitySet Name="vAllSoldPacks" EntityType="CardGame_v2Model.vAllSoldPacks" />
+    <EntitySet Name="vSoldCardPacks" EntityType="CardGame_v2Model.vSoldCardPacks" />
+    <EntitySet Name="vSoldRubyPacks" EntityType="CardGame_v2Model.vSoldRubyPacks" />
+    <AssociationSet Name="FK__tblUserCa__fkVir__34C8D9D1" Association="CardGame_v2Model.FK__tblUserCa__fkVir__34C8D9D1">
+      <End Role="tblVirtualPurchase" EntitySet="tblVirtualPurchase" />
+      <End Role="tblUserCardCollection" EntitySet="tblUserCardCollection" />
+    </AssociationSet>
   </EntityContainer>
+  <EntityType Name="vAllSoldPacks">
+    <Key>
+      <PropertyRef Name="packname" />
+    </Key>
+    <Property Name="count" Type="Int32" />
+    <Property Name="packname" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="vSoldCardPacks">
+    <Key>
+      <PropertyRef Name="packname" />
+    </Key>
+    <Property Name="count" Type="Int32" />
+    <Property Name="packname" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="vSoldRubyPacks">
+    <Key>
+      <PropertyRef Name="packname" />
+    </Key>
+    <Property Name="count" Type="Int32" />
+    <Property Name="packname" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK__tblUserCa__fkVir__34C8D9D1">
+    <End Type="CardGame_v2Model.tblVirtualPurchase" Role="tblVirtualPurchase" Multiplicity="0..1" />
+    <End Type="CardGame_v2Model.tblUserCardCollection" Role="tblUserCardCollection" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblVirtualPurchase">
+        <PropertyRef Name="idVirtualPurchase" />
+      </Principal>
+      <Dependent Role="tblUserCardCollection">
+        <PropertyRef Name="fkVirtualPurchase" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

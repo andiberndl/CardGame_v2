@@ -70,6 +70,7 @@
     <EntitySetMapping Name="tblUserCardCollection">
       <EntityTypeMapping TypeName="CardGame_v2Model.tblUserCardCollection">
         <MappingFragment StoreEntitySet="tblUserCardCollection">
+          <ScalarProperty Name="fkVirtualPurchase" ColumnName="fkVirtualPurchase" />
           <ScalarProperty Name="fkUser" ColumnName="fkUser" />
           <ScalarProperty Name="fkCard" ColumnName="fkCard" />
           <ScalarProperty Name="numcards" ColumnName="numcards" />
@@ -92,6 +93,30 @@
           <ScalarProperty Name="fkCardPack" ColumnName="fkCardPack" />
           <ScalarProperty Name="timeofpurchase" ColumnName="timeofpurchase" />
           <ScalarProperty Name="numpacks" ColumnName="numpacks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vAllSoldPacks">
+      <EntityTypeMapping TypeName="CardGame_v2Model.vAllSoldPacks">
+        <MappingFragment StoreEntitySet="vAllSoldPacks">
+          <ScalarProperty Name="packname" ColumnName="packname" />
+          <ScalarProperty Name="count" ColumnName="count" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vSoldCardPacks">
+      <EntityTypeMapping TypeName="CardGame_v2Model.vSoldCardPacks">
+        <MappingFragment StoreEntitySet="vSoldCardPacks">
+          <ScalarProperty Name="packname" ColumnName="packname" />
+          <ScalarProperty Name="count" ColumnName="count" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vSoldRubyPacks">
+      <EntityTypeMapping TypeName="CardGame_v2Model.vSoldRubyPacks">
+        <MappingFragment StoreEntitySet="vSoldRubyPacks">
+          <ScalarProperty Name="packname" ColumnName="packname" />
+          <ScalarProperty Name="count" ColumnName="count" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

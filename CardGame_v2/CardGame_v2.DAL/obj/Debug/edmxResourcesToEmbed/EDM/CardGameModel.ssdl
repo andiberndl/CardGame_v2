@@ -69,6 +69,7 @@
     <Property Name="fkUser" Type="int" Nullable="false" />
     <Property Name="fkCard" Type="int" Nullable="false" />
     <Property Name="numcards" Type="int" Nullable="false" />
+    <Property Name="fkVirtualPurchase" Type="int" />
   </EntityType>
   <EntityType Name="tblUserRole">
     <Key>
@@ -87,6 +88,45 @@
     <Property Name="timeofpurchase" Type="datetime" Nullable="false" />
     <Property Name="numpacks" Type="int" Nullable="false" />
   </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'CardGame_v2.dbo.vAllSoldPacks' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vAllSoldPacks">
+    <Key>
+      <PropertyRef Name="packname" />
+    </Key>
+    <Property Name="count" Type="int" />
+    <Property Name="packname" Type="nvarchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'CardGame_v2.dbo.vSoldCardPacks' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vSoldCardPacks">
+    <Key>
+      <PropertyRef Name="packname" />
+    </Key>
+    <Property Name="count" Type="int" />
+    <Property Name="packname" Type="nvarchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'CardGame_v2.dbo.vSoldRubyPacks' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vSoldRubyPacks">
+    <Key>
+      <PropertyRef Name="packname" />
+    </Key>
+    <Property Name="count" Type="int" />
+    <Property Name="packname" Type="nvarchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__tblUserCa__fkVir__34C8D9D1">
+    <End Role="tblVirtualPurchase" Type="Self.tblVirtualPurchase" Multiplicity="0..1" />
+    <End Role="tblUserCardCollection" Type="Self.tblUserCardCollection" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblVirtualPurchase">
+        <PropertyRef Name="idVirtualPurchase" />
+      </Principal>
+      <Dependent Role="tblUserCardCollection">
+        <PropertyRef Name="fkVirtualPurchase" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_tblCard_tblCardType">
     <End Role="tblCardType" Type="Self.tblCardType" Multiplicity="0..1" />
     <End Role="tblCard" Type="Self.tblCard" Multiplicity="*" />
@@ -205,6 +245,28 @@
     <EntitySet Name="tblUserCardCollection" EntityType="Self.tblUserCardCollection" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tblUserRole" EntityType="Self.tblUserRole" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tblVirtualPurchase" EntityType="Self.tblVirtualPurchase" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="vAllSoldPacks" EntityType="Self.vAllSoldPacks" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vAllSoldPacks].[count] AS [count], 
+    [vAllSoldPacks].[packname] AS [packname]
+    FROM [dbo].[vAllSoldPacks] AS [vAllSoldPacks]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vSoldCardPacks" EntityType="Self.vSoldCardPacks" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vSoldCardPacks].[count] AS [count], 
+    [vSoldCardPacks].[packname] AS [packname]
+    FROM [dbo].[vSoldCardPacks] AS [vSoldCardPacks]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vSoldRubyPacks" EntityType="Self.vSoldRubyPacks" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vSoldRubyPacks].[count] AS [count], 
+    [vSoldRubyPacks].[packname] AS [packname]
+    FROM [dbo].[vSoldRubyPacks] AS [vSoldRubyPacks]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__tblUserCa__fkVir__34C8D9D1" Association="Self.FK__tblUserCa__fkVir__34C8D9D1">
+      <End Role="tblVirtualPurchase" EntitySet="tblVirtualPurchase" />
+      <End Role="tblUserCardCollection" EntitySet="tblUserCardCollection" />
+    </AssociationSet>
     <AssociationSet Name="FK_tblCard_tblCardType" Association="Self.FK_tblCard_tblCardType">
       <End Role="tblCardType" EntitySet="tblCardType" />
       <End Role="tblCard" EntitySet="tblCard" />
