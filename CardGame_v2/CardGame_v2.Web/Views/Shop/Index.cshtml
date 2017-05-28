@@ -43,14 +43,16 @@
             {
                 <div class="col-md-3" style="display:none">
                     <input type="submit" value="Buy" />
-                    <input type="hidden" value="@cp.CardPackID" name="ID" />
+                    <input type="hidden" value="@cp.CardPackID" name="idPack" />
+                    <input type="hidden" value="@CardGame_v2.DAL.Logic.UserManager.GetUserByEmail(User.Identity.Name).idUser" name="idUser" />
                 </div>
             }
             else
             {
                 <div class="col-md-3">
                     <input type="submit" value="Buy" />
-                    <input type="hidden" value="@cp.CardPackID" name="ID" />
+                    <input type="hidden" value="@cp.CardPackID" name="idPack" />
+                    <input type="hidden" value="@CardGame_v2.DAL.Logic.UserManager.GetUserByEmail(User.Identity.Name).idUser" name="idUser" />
                 </div>
             }
 

@@ -10,5 +10,6 @@ namespace CardGame_v2.Web.Models
         public CardPack Pack { get; set; }
         public int Quantity { get; set; }
         public int UserBalance { get; set; }
+        public int IdUser { get; set; }
     }
 }

@@ -98,18 +98,31 @@ namespace CardGame_v2.DAL.Logic
             return price;
         }
 
-        public static List<tblCard> Order(int id)
+        public static List<tblCard> Order(int idPack, int idUser)
         {
             //3 Steps: Generate Cards, Enter into DB
+            tblVirtualPurchase order = new tblVirtualPurchase();
             Random rng = new Random();
             var generatedCards = new List<tblCard>();
+
+            using (var db = new CardGame_v2Entities())
+            {
+                order.fkCardPack = idPack;
+                order.fkUser = idUser;
+                order.timeofpurchase = DateTime.Now;
+                db.tblVirtualPurchase.Add(order);
+                db.SaveChanges();
+            }
+
+           
+            
 
             //Generate Cards
             try
             {
                 using (var db = new CardGame_v2Entities())
                 {
-                    var cardPack = db.tblCardPack.Find(id);
+                    var cardPack = db.tblCardPack.Find(idPack);
 
                     if (cardPack == null)
                     {
@@ -160,6 +173,12 @@ namespace CardGame_v2.DAL.Logic
             return generatedCards;
         }
 
+        /// <summary>
+        /// for Gold Packs
+        /// </summary>
+        /// <param name="personID"></param>
+        /// <param name="packID"></param>
+        /// <param name="creditCardNumber"></param>
         public static void ExecuteOrder(int personID, int packID, string creditCardNumber)
         {
             using (var db = new CardGame_v2Entities())

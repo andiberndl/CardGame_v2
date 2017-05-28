@@ -72,8 +72,6 @@ namespace CardGame_v2.Web.Controllers
 
         }
 
-
-
         [HttpGet]
         [Authorize(Roles = "player")]
         public ActionResult BuyCardPack(int id)
@@ -91,13 +89,13 @@ namespace CardGame_v2.Web.Controllers
 
         [HttpPost]
         [Authorize(Roles = "player")]
-        public ActionResult BuyCard(int id) //,int numPacks)
+        public ActionResult BuyCard(int idPack, int idUser) //,int numPacks)
         {
-            Writer.LogInfo("id: " + id.ToString());
+            Writer.LogInfo("id: " + idPack.ToString());
             //Writer.LogInfo("numPacks: " + numPacks.ToString());
 
             Order o = new Order();
-            var dbCardPack = ShopManager.GetCardPackById(id);
+            var dbCardPack = ShopManager.GetCardPackById(idPack);
 
             CardPack cardPack = new CardPack();
             cardPack.CardPackID = dbCardPack.idCardPack;
@@ -106,7 +104,7 @@ namespace CardGame_v2.Web.Controllers
             cardPack.Price = dbCardPack.packprice;
 
             o.Pack = cardPack;
-
+            o.IdUser = idUser;
             //o.Quantity = numPacks;
             o.UserBalance = UserManager.GetBalanceByEmail(User.Identity.Name);
 
@@ -138,9 +136,12 @@ namespace CardGame_v2.Web.Controllers
                 {
                     return RedirectToAction("NotEnoughBalance");
                 }
-                var newBalance = o.UserBalance - orderTotal;
+
+
 
                 //User has enough money, subtract money
+                var newBalance = o.UserBalance - orderTotal;
+
                 var hasUpdated = UserManager.UpdateBalanceByEmail(User.Identity.Name, newBalance);
                 if (!hasUpdated)
                 {
@@ -148,7 +149,7 @@ namespace CardGame_v2.Web.Controllers
                 }
 
                 //Generate Cards
-                var orderedCards = ShopManager.Order(o.Pack.CardPackID);
+                var orderedCards = ShopManager.Order(o.Pack.CardPackID, CardGame_v2.DAL.Logic.UserManager.GetUserByEmail(User.Identity.Name).idUser);
 
                 //Add Cards to User Collection
                 var hasUpdatedCards = UserManager.AddCardsToCollectionByEmail(User.Identity.Name, orderedCards);
