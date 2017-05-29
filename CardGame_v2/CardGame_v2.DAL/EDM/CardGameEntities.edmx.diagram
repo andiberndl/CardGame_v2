@@ -4,12 +4,13 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="e876ee5ffa074c21b95c43b73fce157a" Name="Diagram1">
+      <Diagram DiagramId="0c4a950f82be40d5bacfcb3e0405d42c" Name="Diagram1">
+        <EntityTypeShape EntityType="CardGame_v2Model.sysdiagrams" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="CardGame_v2Model.tblCard" Width="1.5" PointX="3" PointY="7.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="CardGame_v2Model.tblCardPack" Width="1.5" PointX="3" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CardGame_v2Model.tblCardPack" Width="1.5" PointX="3" PointY="12" IsExpanded="true" />
         <EntityTypeShape EntityType="CardGame_v2Model.tblCardType" Width="1.5" PointX="0.75" PointY="8.5" IsExpanded="true" />
         <EntityTypeShape EntityType="CardGame_v2Model.tblDeck" Width="1.5" PointX="5.25" PointY="4.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="CardGame_v2Model.tblDeckCard" Width="1.5" PointX="7.5" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CardGame_v2Model.tblDeckCard" Width="1.5" PointX="7.5" PointY="4.125" IsExpanded="true" />
         <EntityTypeShape EntityType="CardGame_v2Model.tblUser" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
         <EntityTypeShape EntityType="CardGame_v2Model.tblUserCardCollection" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
         <EntityTypeShape EntityType="CardGame_v2Model.tblUserRole" Width="1.5" PointX="0.75" PointY="4.375" IsExpanded="true" />
@@ -23,10 +24,6 @@
         <AssociationConnector Association="CardGame_v2Model.FK_tblUser_tblUserRole" ManuallyRouted="false" />
         <AssociationConnector Association="CardGame_v2Model.FK_tblUserCardCollection_tblUser" ManuallyRouted="false" />
         <AssociationConnector Association="CardGame_v2Model.FK_tblVirtualPurchase_tblUser" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="CardGame_v2Model.vAllSoldPacks" Width="1.5" PointX="11.875" PointY="0.75" />
-        <EntityTypeShape EntityType="CardGame_v2Model.vSoldCardPacks" Width="1.5" PointX="9.75" PointY="0.75" />
-        <EntityTypeShape EntityType="CardGame_v2Model.vSoldRubyPacks" Width="1.5" PointX="7.75" PointY="0.75" />
-        <AssociationConnector Association="CardGame_v2Model.FK__tblUserCa__fkVir__34C8D9D1" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -4,7 +4,17 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="CardGame_v2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="CardGame_v2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
         <EntityType Name="tblCard">
           <Key>
             <PropertyRef Name="idCard" />
@@ -74,7 +84,6 @@
           <Property Name="fkUser" Type="int" Nullable="false" />
           <Property Name="fkCard" Type="int" Nullable="false" />
           <Property Name="numcards" Type="int" Nullable="false" />
-          <Property Name="fkVirtualPurchase" Type="int" />
         </EntityType>
         <EntityType Name="tblUserRole">
           <Key>
@@ -93,45 +102,6 @@
           <Property Name="timeofpurchase" Type="datetime" Nullable="false" />
           <Property Name="numpacks" Type="int" Nullable="false" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'CardGame_v2.dbo.vAllSoldPacks' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <EntityType Name="vAllSoldPacks">
-          <Key>
-            <PropertyRef Name="packname" />
-          </Key>
-          <Property Name="count" Type="int" />
-          <Property Name="packname" Type="nvarchar" MaxLength="20" Nullable="false" />
-        </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'CardGame_v2.dbo.vSoldCardPacks' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <EntityType Name="vSoldCardPacks">
-          <Key>
-            <PropertyRef Name="packname" />
-          </Key>
-          <Property Name="count" Type="int" />
-          <Property Name="packname" Type="nvarchar" MaxLength="20" Nullable="false" />
-        </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'CardGame_v2.dbo.vSoldRubyPacks' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <EntityType Name="vSoldRubyPacks">
-          <Key>
-            <PropertyRef Name="packname" />
-          </Key>
-          <Property Name="count" Type="int" />
-          <Property Name="packname" Type="nvarchar" MaxLength="20" Nullable="false" />
-        </EntityType>
-        <Association Name="FK__tblUserCa__fkVir__34C8D9D1">
-          <End Role="tblVirtualPurchase" Type="Self.tblVirtualPurchase" Multiplicity="0..1" />
-          <End Role="tblUserCardCollection" Type="Self.tblUserCardCollection" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tblVirtualPurchase">
-              <PropertyRef Name="idVirtualPurchase" />
-            </Principal>
-            <Dependent Role="tblUserCardCollection">
-              <PropertyRef Name="fkVirtualPurchase" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_tblCard_tblCardType">
           <End Role="tblCardType" Type="Self.tblCardType" Multiplicity="0..1" />
           <End Role="tblCard" Type="Self.tblCard" Multiplicity="*" />
@@ -241,6 +211,7 @@ warning 6002: The table/view 'CardGame_v2.dbo.vSoldRubyPacks' does not have a pr
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="CardGame_v2ModelStoreContainer">
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblCard" EntityType="Self.tblCard" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblCardPack" EntityType="Self.tblCardPack" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblCardType" EntityType="Self.tblCardType" Schema="dbo" store:Type="Tables" />
@@ -250,28 +221,6 @@ warning 6002: The table/view 'CardGame_v2.dbo.vSoldRubyPacks' does not have a pr
           <EntitySet Name="tblUserCardCollection" EntityType="Self.tblUserCardCollection" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblUserRole" EntityType="Self.tblUserRole" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblVirtualPurchase" EntityType="Self.tblVirtualPurchase" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="vAllSoldPacks" EntityType="Self.vAllSoldPacks" store:Type="Views" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [vAllSoldPacks].[count] AS [count], 
-    [vAllSoldPacks].[packname] AS [packname]
-    FROM [dbo].[vAllSoldPacks] AS [vAllSoldPacks]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="vSoldCardPacks" EntityType="Self.vSoldCardPacks" store:Type="Views" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [vSoldCardPacks].[count] AS [count], 
-    [vSoldCardPacks].[packname] AS [packname]
-    FROM [dbo].[vSoldCardPacks] AS [vSoldCardPacks]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="vSoldRubyPacks" EntityType="Self.vSoldRubyPacks" store:Type="Views" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [vSoldRubyPacks].[count] AS [count], 
-    [vSoldRubyPacks].[packname] AS [packname]
-    FROM [dbo].[vSoldRubyPacks] AS [vSoldRubyPacks]</DefiningQuery>
-          </EntitySet>
-          <AssociationSet Name="FK__tblUserCa__fkVir__34C8D9D1" Association="Self.FK__tblUserCa__fkVir__34C8D9D1">
-            <End Role="tblVirtualPurchase" EntitySet="tblVirtualPurchase" />
-            <End Role="tblUserCardCollection" EntitySet="tblUserCardCollection" />
-          </AssociationSet>
           <AssociationSet Name="FK_tblCard_tblCardType" Association="Self.FK_tblCard_tblCardType">
             <End Role="tblCardType" EntitySet="tblCardType" />
             <End Role="tblCard" EntitySet="tblCard" />
@@ -309,10 +258,21 @@ warning 6002: The table/view 'CardGame_v2.dbo.vSoldRubyPacks' does not have a pr
             <End Role="tblVirtualPurchase" EntitySet="tblVirtualPurchase" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="CardGame_v2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
         <EntityType Name="tblCard">
           <Key>
             <PropertyRef Name="idCard" />
@@ -336,8 +296,8 @@ warning 6002: The table/view 'CardGame_v2.dbo.vSoldRubyPacks' does not have a pr
           <Property Name="packname" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="numcards" Type="Int32" Nullable="false" />
           <Property Name="packprice" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="tblVirtualPurchase" Relationship="Self.FK_tblVirtualPurchase_tblCardPack" FromRole="tblCardPack" ToRole="tblVirtualPurchase" />
           <Property Name="RubyAmount" Type="Int32" />
+          <NavigationProperty Name="tblVirtualPurchase" Relationship="Self.FK_tblVirtualPurchase_tblCardPack" FromRole="tblCardPack" ToRole="tblVirtualPurchase" />
         </EntityType>
         <EntityType Name="tblCardType">
           <Key>
@@ -397,8 +357,6 @@ warning 6002: The table/view 'CardGame_v2.dbo.vSoldRubyPacks' does not have a pr
           <Property Name="numcards" Type="Int32" Nullable="false" />
           <NavigationProperty Name="tblCard" Relationship="Self.FK_tblUserCardCollection_tblCard" FromRole="tblUserCardCollection" ToRole="tblCard" />
           <NavigationProperty Name="tblUser" Relationship="Self.FK_tblUserCardCollection_tblUser" FromRole="tblUserCardCollection" ToRole="tblUser" />
-          <Property Name="fkVirtualPurchase" Type="Int32" />
-          <NavigationProperty Name="tblVirtualPurchase" Relationship="CardGame_v2Model.FK__tblUserCa__fkVir__34C8D9D1" FromRole="tblUserCardCollection" ToRole="tblVirtualPurchase" />
         </EntityType>
         <EntityType Name="tblUserRole">
           <Key>
@@ -419,7 +377,6 @@ warning 6002: The table/view 'CardGame_v2.dbo.vSoldRubyPacks' does not have a pr
           <Property Name="numpacks" Type="Int32" Nullable="false" />
           <NavigationProperty Name="tblCardPack" Relationship="Self.FK_tblVirtualPurchase_tblCardPack" FromRole="tblVirtualPurchase" ToRole="tblCardPack" />
           <NavigationProperty Name="tblUser" Relationship="Self.FK_tblVirtualPurchase_tblUser" FromRole="tblVirtualPurchase" ToRole="tblUser" />
-          <NavigationProperty Name="tblUserCardCollection" Relationship="CardGame_v2Model.FK__tblUserCa__fkVir__34C8D9D1" FromRole="tblVirtualPurchase" ToRole="tblUserCardCollection" />
         </EntityType>
         <Association Name="FK_tblCard_tblCardType">
           <End Role="tblCardType" Type="Self.tblCardType" Multiplicity="0..1" />
@@ -530,6 +487,7 @@ warning 6002: The table/view 'CardGame_v2.dbo.vSoldRubyPacks' does not have a pr
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="CardGame_v2Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
           <EntitySet Name="tblCard" EntityType="Self.tblCard" />
           <EntitySet Name="tblCardPack" EntityType="Self.tblCardPack" />
           <EntitySet Name="tblCardType" EntityType="Self.tblCardType" />
@@ -575,53 +533,24 @@ warning 6002: The table/view 'CardGame_v2.dbo.vSoldRubyPacks' does not have a pr
             <End Role="tblUser" EntitySet="tblUser" />
             <End Role="tblVirtualPurchase" EntitySet="tblVirtualPurchase" />
           </AssociationSet>
-          <EntitySet Name="vAllSoldPacks" EntityType="CardGame_v2Model.vAllSoldPacks" />
-          <EntitySet Name="vSoldCardPacks" EntityType="CardGame_v2Model.vSoldCardPacks" />
-          <EntitySet Name="vSoldRubyPacks" EntityType="CardGame_v2Model.vSoldRubyPacks" />
-          <AssociationSet Name="FK__tblUserCa__fkVir__34C8D9D1" Association="CardGame_v2Model.FK__tblUserCa__fkVir__34C8D9D1">
-            <End Role="tblVirtualPurchase" EntitySet="tblVirtualPurchase" />
-            <End Role="tblUserCardCollection" EntitySet="tblUserCardCollection" />
-          </AssociationSet>
         </EntityContainer>
-        <EntityType Name="vAllSoldPacks">
-          <Key>
-            <PropertyRef Name="packname" />
-          </Key>
-          <Property Name="count" Type="Int32" />
-          <Property Name="packname" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
-        </EntityType>
-        <EntityType Name="vSoldCardPacks">
-          <Key>
-            <PropertyRef Name="packname" />
-          </Key>
-          <Property Name="count" Type="Int32" />
-          <Property Name="packname" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
-        </EntityType>
-        <EntityType Name="vSoldRubyPacks">
-          <Key>
-            <PropertyRef Name="packname" />
-          </Key>
-          <Property Name="count" Type="Int32" />
-          <Property Name="packname" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
-        </EntityType>
-        <Association Name="FK__tblUserCa__fkVir__34C8D9D1">
-          <End Type="CardGame_v2Model.tblVirtualPurchase" Role="tblVirtualPurchase" Multiplicity="0..1" />
-          <End Type="CardGame_v2Model.tblUserCardCollection" Role="tblUserCardCollection" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tblVirtualPurchase">
-              <PropertyRef Name="idVirtualPurchase" />
-            </Principal>
-            <Dependent Role="tblUserCardCollection">
-              <PropertyRef Name="fkVirtualPurchase" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="CardGame_v2ModelStoreContainer" CdmEntityContainer="CardGame_v2Entities">
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="CardGame_v2Model.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="tblCard">
             <EntityTypeMapping TypeName="CardGame_v2Model.tblCard">
               <MappingFragment StoreEntitySet="tblCard">
@@ -638,11 +567,11 @@ warning 6002: The table/view 'CardGame_v2.dbo.vSoldRubyPacks' does not have a pr
           <EntitySetMapping Name="tblCardPack">
             <EntityTypeMapping TypeName="CardGame_v2Model.tblCardPack">
               <MappingFragment StoreEntitySet="tblCardPack">
-                <ScalarProperty Name="RubyAmount" ColumnName="RubyAmount" />
                 <ScalarProperty Name="idCardPack" ColumnName="idCardPack" />
                 <ScalarProperty Name="packname" ColumnName="packname" />
                 <ScalarProperty Name="numcards" ColumnName="numcards" />
                 <ScalarProperty Name="packprice" ColumnName="packprice" />
+                <ScalarProperty Name="RubyAmount" ColumnName="RubyAmount" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -691,7 +620,6 @@ warning 6002: The table/view 'CardGame_v2.dbo.vSoldRubyPacks' does not have a pr
           <EntitySetMapping Name="tblUserCardCollection">
             <EntityTypeMapping TypeName="CardGame_v2Model.tblUserCardCollection">
               <MappingFragment StoreEntitySet="tblUserCardCollection">
-                <ScalarProperty Name="fkVirtualPurchase" ColumnName="fkVirtualPurchase" />
                 <ScalarProperty Name="fkUser" ColumnName="fkUser" />
                 <ScalarProperty Name="fkCard" ColumnName="fkCard" />
                 <ScalarProperty Name="numcards" ColumnName="numcards" />
@@ -714,30 +642,6 @@ warning 6002: The table/view 'CardGame_v2.dbo.vSoldRubyPacks' does not have a pr
                 <ScalarProperty Name="fkCardPack" ColumnName="fkCardPack" />
                 <ScalarProperty Name="timeofpurchase" ColumnName="timeofpurchase" />
                 <ScalarProperty Name="numpacks" ColumnName="numpacks" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="vAllSoldPacks">
-            <EntityTypeMapping TypeName="CardGame_v2Model.vAllSoldPacks">
-              <MappingFragment StoreEntitySet="vAllSoldPacks">
-                <ScalarProperty Name="packname" ColumnName="packname" />
-                <ScalarProperty Name="count" ColumnName="count" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="vSoldCardPacks">
-            <EntityTypeMapping TypeName="CardGame_v2Model.vSoldCardPacks">
-              <MappingFragment StoreEntitySet="vSoldCardPacks">
-                <ScalarProperty Name="packname" ColumnName="packname" />
-                <ScalarProperty Name="count" ColumnName="count" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="vSoldRubyPacks">
-            <EntityTypeMapping TypeName="CardGame_v2Model.vSoldRubyPacks">
-              <MappingFragment StoreEntitySet="vSoldRubyPacks">
-                <ScalarProperty Name="packname" ColumnName="packname" />
-                <ScalarProperty Name="count" ColumnName="count" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

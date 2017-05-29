@@ -1,0 +1,176 @@
+<Info>
+  <Time>29.05.2017 07:31:28</Time>
+  <Info>Entered Pass=123user!</Info>
+</Info>
+<Info>
+  <Time>29.05.2017 07:31:28</Time>
+  <Info>Hashed Pass=F980C88E27843F0ED08907C79C79EB65D43A680E662D8C55261235C8515F827613C0CFCEA6D76862D21DF9CF7496AF3376B16F5E9D4218C6BC2DF49C5EC2B79C</Info>
+</Info>
+<Xcpt>
+  <Time>29.05.2017 07:36:21</Time>
+  <Exception>
+    <Source>EntityFramework</Source>
+    <Message>Das angegebene Schema ist ungültig. Fehler: 
+Die Beziehung 'CardGame_v2Model.FK_tblUserCardCollection_tblCard' wurde nicht geladen, weil der Typ 'CardGame_v2Model.tblUserCardCollection' nicht verfügbar ist.
+Die folgenden Informationen können beim Beheben des vorherigen Fehlers nützlich sein:
+Die erforderliche Eigenschaft 'fkVirtualPurchase' ist im Typ 'CardGame_v2.DAL.EDM.tblUserCardCollection' nicht vorhanden.
+
+
+Die Beziehung 'CardGame_v2Model.FK_tblUserCardCollection_tblUser' wurde nicht geladen, weil der Typ 'CardGame_v2Model.tblUserCardCollection' nicht verfügbar ist.
+Die folgenden Informationen können beim Beheben des vorherigen Fehlers nützlich sein:
+Die erforderliche Eigenschaft 'fkVirtualPurchase' ist im Typ 'CardGame_v2.DAL.EDM.tblUserCardCollection' nicht vorhanden.
+
+
+Die Beziehung 'CardGame_v2Model.FK__tblUserCa__fkVir__34C8D9D1' wurde nicht geladen, weil der Typ 'CardGame_v2Model.tblUserCardCollection' nicht verfügbar ist.
+Die folgenden Informationen können beim Beheben des vorherigen Fehlers nützlich sein:
+Die erforderliche Eigenschaft 'fkVirtualPurchase' ist im Typ 'CardGame_v2.DAL.EDM.tblUserCardCollection' nicht vorhanden.
+
+</Message>
+    <Stack>   bei System.Data.Entity.Core.Metadata.Edm.ObjectItemCollection.LoadAssemblyFromCache(Assembly assembly, Boolean loadReferencedAssemblies, EdmItemCollection edmItemCollection, Action`1 logLoadMessage)
+   bei System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.ExplicitLoadFromAssembly(Assembly assembly, ObjectItemCollection collection, Action`1 logLoadMessage)
+   bei System.Data.Entity.Core.Metadata.Edm.MetadataOptimization.TryUpdateEntitySetMappingsForType(Type entityType)
+   bei System.Data.Entity.Internal.InternalContext.UpdateEntitySetMappingsForType(Type entityType)
+   bei System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   bei System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   bei System.Data.Entity.Internal.Linq.InternalSet`1.GetEnumerator()
+   bei System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   bei System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   bei CardGame_v2.DAL.Logic.UserManager..cctor() in C:\Users\bernandr\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.DAL\Logic\UserManager.cs:Zeile 29.</Stack>
+  </Exception>
+</Xcpt>
+<Xcpt>
+  <Time>29.05.2017 07:36:22</Time>
+  <Exception>
+    <Source>EntityFramework</Source>
+    <Message>Das angegebene Schema ist ungültig. Fehler: 
+Die Beziehung 'CardGame_v2Model.FK_tblUserCardCollection_tblCard' wurde nicht geladen, weil der Typ 'CardGame_v2Model.tblUserCardCollection' nicht verfügbar ist.
+Die folgenden Informationen können beim Beheben des vorherigen Fehlers nützlich sein:
+Die erforderliche Eigenschaft 'fkVirtualPurchase' ist im Typ 'CardGame_v2.DAL.EDM.tblUserCardCollection' nicht vorhanden.
+
+
+Die Beziehung 'CardGame_v2Model.FK_tblUserCardCollection_tblUser' wurde nicht geladen, weil der Typ 'CardGame_v2Model.tblUserCardCollection' nicht verfügbar ist.
+Die folgenden Informationen können beim Beheben des vorherigen Fehlers nützlich sein:
+Die erforderliche Eigenschaft 'fkVirtualPurchase' ist im Typ 'CardGame_v2.DAL.EDM.tblUserCardCollection' nicht vorhanden.
+
+
+Die Beziehung 'CardGame_v2Model.FK__tblUserCa__fkVir__34C8D9D1' wurde nicht geladen, weil der Typ 'CardGame_v2Model.tblUserCardCollection' nicht verfügbar ist.
+Die folgenden Informationen können beim Beheben des vorherigen Fehlers nützlich sein:
+Die erforderliche Eigenschaft 'fkVirtualPurchase' ist im Typ 'CardGame_v2.DAL.EDM.tblUserCardCollection' nicht vorhanden.
+
+</Message>
+    <Stack>   bei System.Data.Entity.Core.Metadata.Edm.ObjectItemCollection.LoadAssemblyFromCache(Assembly assembly, Boolean loadReferencedAssemblies, EdmItemCollection edmItemCollection, Action`1 logLoadMessage)
+   bei System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.ExplicitLoadFromAssembly(Assembly assembly, ObjectItemCollection collection, Action`1 logLoadMessage)
+   bei System.Data.Entity.Core.Metadata.Edm.MetadataOptimization.TryUpdateEntitySetMappingsForType(Type entityType)
+   bei System.Data.Entity.Internal.InternalContext.UpdateEntitySetMappingsForType(Type entityType)
+   bei System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   bei System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   bei System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   bei System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   bei System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   bei CardGame_v2.DAL.Logic.UserManager.GetUserByEmail(String email) in C:\Users\bernandr\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.DAL\Logic\UserManager.cs:Zeile 70.</Stack>
+  </Exception>
+</Xcpt>
+<Xcpt>
+  <Time>29.05.2017 07:37:09</Time>
+  <Exception>
+    <Source>EntityFramework</Source>
+    <Message>Das angegebene Schema ist ungültig. Fehler: 
+Die Beziehung 'CardGame_v2Model.FK_tblUserCardCollection_tblCard' wurde nicht geladen, weil der Typ 'CardGame_v2Model.tblUserCardCollection' nicht verfügbar ist.
+Die folgenden Informationen können beim Beheben des vorherigen Fehlers nützlich sein:
+Die erforderliche Eigenschaft 'fkVirtualPurchase' ist im Typ 'CardGame_v2.DAL.EDM.tblUserCardCollection' nicht vorhanden.
+
+
+Die Beziehung 'CardGame_v2Model.FK_tblUserCardCollection_tblUser' wurde nicht geladen, weil der Typ 'CardGame_v2Model.tblUserCardCollection' nicht verfügbar ist.
+Die folgenden Informationen können beim Beheben des vorherigen Fehlers nützlich sein:
+Die erforderliche Eigenschaft 'fkVirtualPurchase' ist im Typ 'CardGame_v2.DAL.EDM.tblUserCardCollection' nicht vorhanden.
+
+
+Die Beziehung 'CardGame_v2Model.FK__tblUserCa__fkVir__34C8D9D1' wurde nicht geladen, weil der Typ 'CardGame_v2Model.tblUserCardCollection' nicht verfügbar ist.
+Die folgenden Informationen können beim Beheben des vorherigen Fehlers nützlich sein:
+Die erforderliche Eigenschaft 'fkVirtualPurchase' ist im Typ 'CardGame_v2.DAL.EDM.tblUserCardCollection' nicht vorhanden.
+
+</Message>
+    <Stack>   bei System.Data.Entity.Core.Metadata.Edm.ObjectItemCollection.LoadAssemblyFromCache(Assembly assembly, Boolean loadReferencedAssemblies, EdmItemCollection edmItemCollection, Action`1 logLoadMessage)
+   bei System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.ExplicitLoadFromAssembly(Assembly assembly, ObjectItemCollection collection, Action`1 logLoadMessage)
+   bei System.Data.Entity.Core.Metadata.Edm.MetadataOptimization.TryUpdateEntitySetMappingsForType(Type entityType)
+   bei System.Data.Entity.Internal.InternalContext.UpdateEntitySetMappingsForType(Type entityType)
+   bei System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   bei System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   bei System.Data.Entity.Internal.Linq.InternalSet`1.GetEnumerator()
+   bei System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   bei System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   bei CardGame_v2.DAL.Logic.UserManager..cctor() in C:\Users\bernandr\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.DAL\Logic\UserManager.cs:Zeile 29.</Stack>
+  </Exception>
+</Xcpt>
+<Xcpt>
+  <Time>29.05.2017 07:37:09</Time>
+  <Exception>
+    <Source>EntityFramework</Source>
+    <Message>Das angegebene Schema ist ungültig. Fehler: 
+Die Beziehung 'CardGame_v2Model.FK_tblUserCardCollection_tblCard' wurde nicht geladen, weil der Typ 'CardGame_v2Model.tblUserCardCollection' nicht verfügbar ist.
+Die folgenden Informationen können beim Beheben des vorherigen Fehlers nützlich sein:
+Die erforderliche Eigenschaft 'fkVirtualPurchase' ist im Typ 'CardGame_v2.DAL.EDM.tblUserCardCollection' nicht vorhanden.
+
+
+Die Beziehung 'CardGame_v2Model.FK_tblUserCardCollection_tblUser' wurde nicht geladen, weil der Typ 'CardGame_v2Model.tblUserCardCollection' nicht verfügbar ist.
+Die folgenden Informationen können beim Beheben des vorherigen Fehlers nützlich sein:
+Die erforderliche Eigenschaft 'fkVirtualPurchase' ist im Typ 'CardGame_v2.DAL.EDM.tblUserCardCollection' nicht vorhanden.
+
+
+Die Beziehung 'CardGame_v2Model.FK__tblUserCa__fkVir__34C8D9D1' wurde nicht geladen, weil der Typ 'CardGame_v2Model.tblUserCardCollection' nicht verfügbar ist.
+Die folgenden Informationen können beim Beheben des vorherigen Fehlers nützlich sein:
+Die erforderliche Eigenschaft 'fkVirtualPurchase' ist im Typ 'CardGame_v2.DAL.EDM.tblUserCardCollection' nicht vorhanden.
+
+</Message>
+    <Stack>   bei System.Data.Entity.Core.Metadata.Edm.ObjectItemCollection.LoadAssemblyFromCache(Assembly assembly, Boolean loadReferencedAssemblies, EdmItemCollection edmItemCollection, Action`1 logLoadMessage)
+   bei System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.ExplicitLoadFromAssembly(Assembly assembly, ObjectItemCollection collection, Action`1 logLoadMessage)
+   bei System.Data.Entity.Core.Metadata.Edm.MetadataOptimization.TryUpdateEntitySetMappingsForType(Type entityType)
+   bei System.Data.Entity.Internal.InternalContext.UpdateEntitySetMappingsForType(Type entityType)
+   bei System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   bei System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   bei System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   bei System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   bei System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   bei CardGame_v2.DAL.Logic.UserManager.GetUserByEmail(String email) in C:\Users\bernandr\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.DAL\Logic\UserManager.cs:Zeile 70.</Stack>
+  </Exception>
+</Xcpt>
+<Xcpt>
+  <Time>29.05.2017 07:38:28</Time>
+  <Exception>
+    <Source>EntityFramework</Source>
+    <Message>Das angegebene Schema ist ungültig. Fehler: 
+Die Beziehung 'CardGame_v2Model.FK_tblUserCardCollection_tblCard' wurde nicht geladen, weil der Typ 'CardGame_v2Model.tblUserCardCollection' nicht verfügbar ist.
+Die folgenden Informationen können beim Beheben des vorherigen Fehlers nützlich sein:
+Die erforderliche Eigenschaft 'fkVirtualPurchase' ist im Typ 'CardGame_v2.DAL.EDM.tblUserCardCollection' nicht vorhanden.
+
+
+Die Beziehung 'CardGame_v2Model.FK_tblUserCardCollection_tblUser' wurde nicht geladen, weil der Typ 'CardGame_v2Model.tblUserCardCollection' nicht verfügbar ist.
+Die folgenden Informationen können beim Beheben des vorherigen Fehlers nützlich sein:
+Die erforderliche Eigenschaft 'fkVirtualPurchase' ist im Typ 'CardGame_v2.DAL.EDM.tblUserCardCollection' nicht vorhanden.
+
+
+Die Beziehung 'CardGame_v2Model.FK__tblUserCa__fkVir__34C8D9D1' wurde nicht geladen, weil der Typ 'CardGame_v2Model.tblUserCardCollection' nicht verfügbar ist.
+Die folgenden Informationen können beim Beheben des vorherigen Fehlers nützlich sein:
+Die erforderliche Eigenschaft 'fkVirtualPurchase' ist im Typ 'CardGame_v2.DAL.EDM.tblUserCardCollection' nicht vorhanden.
+
+</Message>
+    <Stack>   bei System.Data.Entity.Core.Metadata.Edm.ObjectItemCollection.LoadAssemblyFromCache(Assembly assembly, Boolean loadReferencedAssemblies, EdmItemCollection edmItemCollection, Action`1 logLoadMessage)
+   bei System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.ExplicitLoadFromAssembly(Assembly assembly, ObjectItemCollection collection, Action`1 logLoadMessage)
+   bei System.Data.Entity.Core.Metadata.Edm.MetadataOptimization.TryUpdateEntitySetMappingsForType(Type entityType)
+   bei System.Data.Entity.Internal.InternalContext.UpdateEntitySetMappingsForType(Type entityType)
+   bei System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   bei System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   bei System.Data.Entity.Internal.Linq.InternalSet`1.GetEnumerator()
+   bei System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   bei System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   bei CardGame_v2.DAL.Logic.UserManager..cctor() in C:\Users\bernandr\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.DAL\Logic\UserManager.cs:Zeile 29.</Stack>
+  </Exception>
+</Xcpt>
+<Info>
+  <Time>29.05.2017 07:48:52</Time>
+  <Info>Entered Pass=123user!</Info>
+</Info>
+<Info>
+  <Time>29.05.2017 07:48:52</Time>
+  <Info>Hashed Pass=F980C88E27843F0ED08907C79C79EB65D43A680E662D8C55261235C8515F827613C0CFCEA6D76862D21DF9CF7496AF3376B16F5E9D4218C6BC2DF49C5EC2B79C</Info>
+</Info>

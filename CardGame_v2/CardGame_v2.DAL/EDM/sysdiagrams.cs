@@ -12,13 +12,12 @@ namespace CardGame_v2.DAL.EDM
     using System;
     using System.Collections.Generic;
     
-    public partial class tblDeckCard
+    public partial class sysdiagrams
     {
-        public int fkDeck { get; set; }
-        public int fkCard { get; set; }
-        public int numcards { get; set; }
-    
-        public virtual tblCard tblCard { get; set; }
-        public virtual tblDeck tblDeck { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }
