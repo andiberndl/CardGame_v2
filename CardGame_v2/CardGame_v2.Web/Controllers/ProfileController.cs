@@ -6,11 +6,16 @@ using System.Web.Mvc;
 using CardGame_v2.Web.Models;
 using CardGame_v2.DAL.EDM;
 using CardGame_v2.DAL.Logic;
+using System.Data.Entity;
+using System.Net;
 
 namespace CardGame_v2.Web.Controllers
 {
     public class ProfileController : Controller
     {
+        private CardGame_v2Entities db = new CardGame_v2Entities();
+
+
         // GET: Profile
         [HttpGet]
         [Authorize(Roles = "player,admin")]
@@ -100,6 +105,37 @@ namespace CardGame_v2.Web.Controllers
             }
 
             return View(deckCards);
+        }
+
+        public ActionResult Edit()
+        {
+            int id = CardGame_v2.DAL.Logic.UserManager.GetUserByEmail(User.Identity.Name).idUser;
+             
+            tblUser tblUser = db.tblUser.Find(id);
+            if (tblUser == null)
+            {
+                return HttpNotFound();
+            }
+            ViewBag.fkUserRole = new SelectList(db.tblUserRole, "idUserrole", "rolename", tblUser.fkUserRole);
+            return View(tblUser);
+        }
+
+        
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit([Bind(Include = "idUser,firstname,lastname,email,username,userpassword,usersalt,fkUserRole,avatar,currency,street,zipcode,city")] tblUser tblUser)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(tblUser).State = EntityState.Modified;
+                tblUser.username = "";
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            ViewBag.fkUserRole = new SelectList(db.tblUserRole, "idUserrole", "rolename", tblUser.fkUserRole);
+            return View(tblUser);
+                       
         }
     }
 }

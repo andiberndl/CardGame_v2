@@ -29,9 +29,12 @@ namespace CardGame_v2.DAL.EDM
         public string username { get; set; }
         public string userpassword { get; set; }
         public string usersalt { get; set; }
-        public Nullable<int> fkUserRole { get; set; }
+        public int fkUserRole { get; set; }
         public byte[] avatar { get; set; }
         public int currency { get; set; }
+        public string street { get; set; }
+        public int zipcode { get; set; }
+        public string city { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tblDeck> tblDeck { get; set; }

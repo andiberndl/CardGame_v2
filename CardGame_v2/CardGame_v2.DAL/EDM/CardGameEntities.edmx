@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="CardGame_v2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="CardGame_v2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="sysdiagrams">
           <Key>
             <PropertyRef Name="diagram_id" />
@@ -75,6 +75,9 @@
           <Property Name="fkUserRole" Type="int" />
           <Property Name="avatar" Type="varbinary(max)" />
           <Property Name="currency" Type="int" Nullable="false" />
+          <Property Name="street" Type="nvarchar" MaxLength="150" />
+          <Property Name="zipcode" Type="int" />
+          <Property Name="city" Type="nvarchar" MaxLength="150" />
         </EntityType>
         <EntityType Name="tblUserCardCollection">
           <Key>
@@ -258,8 +261,7 @@
             <End Role="tblVirtualPurchase" EntitySet="tblVirtualPurchase" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="CardGame_v2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -346,6 +348,9 @@
           <NavigationProperty Name="tblUserRole" Relationship="Self.FK_tblUser_tblUserRole" FromRole="tblUser" ToRole="tblUserRole" />
           <NavigationProperty Name="tblUserCardCollection" Relationship="Self.FK_tblUserCardCollection_tblUser" FromRole="tblUser" ToRole="tblUserCardCollection" />
           <NavigationProperty Name="tblVirtualPurchase" Relationship="Self.FK_tblVirtualPurchase_tblUser" FromRole="tblUser" ToRole="tblVirtualPurchase" />
+          <Property Name="street" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="zipcode" Type="Int32" />
+          <Property Name="city" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="tblUserCardCollection">
           <Key>
@@ -604,6 +609,9 @@
           <EntitySetMapping Name="tblUser">
             <EntityTypeMapping TypeName="CardGame_v2Model.tblUser">
               <MappingFragment StoreEntitySet="tblUser">
+                <ScalarProperty Name="city" ColumnName="city" />
+                <ScalarProperty Name="zipcode" ColumnName="zipcode" />
+                <ScalarProperty Name="street" ColumnName="street" />
                 <ScalarProperty Name="idUser" ColumnName="idUser" />
                 <ScalarProperty Name="firstname" ColumnName="firstname" />
                 <ScalarProperty Name="lastname" ColumnName="lastname" />

@@ -537,3 +537,6 @@ C:\Users\andi\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.Web\obj\Debug
 C:\Users\bernandr\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.Web\bin\itextsharp.dll
 C:\Users\bernandr\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.Web\bin\RazorPDF.dll
 C:\Users\bernandr\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.Web\bin\itextsharp.xml
+C:\Users\bernandr\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.Web\bin\EntityFramework.SqlServer.dll
+C:\Users\bernandr\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.Web\bin\EntityFramework.SqlServer.xml
+C:\Users\bernandr\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.Web\bin\de\EntityFramework.SqlServer.resources.dll

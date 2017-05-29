@@ -13,6 +13,9 @@ namespace CardGame_v2.Web.Models
         [DisplayName("eMail Address")]
         public string Email { get; set; }
         public decimal Currency { get; set; }
+        public string Street { get; set; }
+        public int Zipcode { get; set; }
+        public string City { get; set; }
 
         public int NumDistinctCardsOwned { get; set; }
         public int NumTotalCardsOwned { get; set; }

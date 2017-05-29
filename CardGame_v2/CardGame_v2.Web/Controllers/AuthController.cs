@@ -81,7 +81,11 @@ namespace CardGame_v2.Web.Controllers
                 dbUser.userpassword = regUser.Password;
                 dbUser.email = regUser.Email;
 
-                dbUser.username = ""; //Im Moment nicht in Verwendung
+                dbUser.city = regUser.City;
+                dbUser.zipcode = regUser.ZipCode;
+                dbUser.street = regUser.Street;
+
+                dbUser.username = "  "; //Im Moment nicht in Verwendung
                 dbUser.currency = 1000; //Jeder faengt mit 1000 Waehrung an
 
                 dbUser.fkUserRole = 2; //Jeder ist per Default ein Spieler

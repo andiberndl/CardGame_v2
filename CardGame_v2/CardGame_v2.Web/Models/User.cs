@@ -19,6 +19,12 @@ namespace CardGame_v2.Web.Models
         [RegularExpression(@"^[a-zA-Z--]+$", ErrorMessage = "only upper and lowercase letters allowed")]
         public string LastName { get; set; }
 
+        public string Street { get; set; }
+
+        public int ZipCode { get; set; }
+
+        public string City { get; set; }
+
 
         public decimal Currency { get; set; }
     }

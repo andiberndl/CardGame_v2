@@ -83,6 +83,9 @@
     <NavigationProperty Name="tblUserRole" Relationship="Self.FK_tblUser_tblUserRole" FromRole="tblUser" ToRole="tblUserRole" />
     <NavigationProperty Name="tblUserCardCollection" Relationship="Self.FK_tblUserCardCollection_tblUser" FromRole="tblUser" ToRole="tblUserCardCollection" />
     <NavigationProperty Name="tblVirtualPurchase" Relationship="Self.FK_tblVirtualPurchase_tblUser" FromRole="tblUser" ToRole="tblVirtualPurchase" />
+    <Property Name="street" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="zipcode" Type="Int32" />
+    <Property Name="city" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="tblUserCardCollection">
     <Key>
