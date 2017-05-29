@@ -4,9 +4,24 @@
     ViewBag.Title = "Shop";
 }
 
-<h1 style="color:lawngreen">Welcome to the Shop!</h1>
+<h1 style="color:deeppink">Welcome to the Shop!</h1>
 
-<h2 style="color:lawngreen">Available Card Packs</h2>
+<h2 style="color:deeppink">Available Card Packs</h2>
+
+
+<h2 style="color: red">
+    @if (TempData["orderAbort"] != null)
+    { @TempData["orderAbort"];
+    }
+</h2>
+<h2 style="color:lawngreen">
+    @if (TempData["orderComplete"] != null)
+    { @TempData["orderComplete"];
+    }
+</h2>
+<br />
+<br />
+<br />
 
 
 <!--Card Packs-->
@@ -60,34 +75,10 @@
     }
 </div>
 
-
-
-<!--Ruby Packs-->
-@*<br />
 <br />
 <br />
-<div class="row" style="color:lawngreen">
-    @foreach (var item in Model.rubyPacks)
-    {
-        <div class="col-lg-4">
-            @item.PackName
-        </div>
-    }
-
-    @foreach (var item in Model.rubyPacks)
-    {
-        <div class="col-md-4">
-            @item.Price
-        </div>
-    }
-
-    @foreach (var item in Model.rubyPacks)
-    {
-        <div class="col-md-4">
-            @item.RubyAmount
-        </div>
-    }*@
-
+<br />
+<br />
 
     <div class="container" style="color:lawngreen">
         <h4 class="headline-corr">Ruby Packs</h4>
@@ -95,11 +86,14 @@
         {
             using (Html.BeginForm())
             {
+                var rubys = Model.rubyPacks.ToList()[i].Price * Model.rubyPacks.ToList()[i].RubyAmount;
+
+
                 <div class="row col-md-4 col-sm-6 col-xs-12 pack-container">
                     <div class="col-md-8 vcenter pack-style">
                         <div class="container pack-style-container">
                             <div class="row"> @Model.rubyPacks.ToList()[i].PackName </div>
-                            <div class="row"> you get @Model.rubyPacks.ToList()[i].RubyAmount Ruby</div>
+                            <div class="row"> you get @rubys Ruby</div>
                             <div class="row pack-row-price"> @Model.rubyPacks.ToList()[i].Price <span>€</span> </div>
                             <div class="row">
                                 <!--Hidden Field zur Übergabe der PackID + Preis -->
@@ -115,41 +109,47 @@
                                                 <h4 class="modal-title">Buy Gold via Credit Card</h4>
                                             </div>
                                             <div class="modal-body">
-                                                <p>Some text in the modal.</p>
+                                                <p>Please enter your Credit Card Data</p>
                                                 @using (Html.BeginForm())
                                                 {
                                                     <div class="form-horizontal">
                                                         <div class="form-group">
                                                             <label class="control-label col-md-4">Firstname</label>
                                                             <div class="col-md-8">
-                                                                <input type="text" name="Firstname" value="" class="form-control" />
+                                                                <input type="text" name="Firstname" value="" class="form-control" pattern="[A-Za-z].{1,}" required 
+                                                                       title="Only upper and lower case allowed" style="font-family:Arial" />
                                                             </div>
                                                         </div>
                                                         <div class="form-group">
                                                             <label class="control-label col-md-4">Lastname</label>
                                                             <div class="col-md-8">
-                                                                <input type="text" name="Lastname" value="" class="form-control" />
+                                                                <input type="text" name="Lastname" value="" class="form-control" pattern="[A-Za-z].{1,}" required 
+                                                                       title="Only upper and lower case allowed" style="font-family:Arial" />
                                                             </div>
                                                         </div>
                                                         <div class="form-group">
                                                             <label class="control-label col-md-4">Creditcardnumber</label>
                                                             <div class="col-md-8">
-                                                                <input type="text" name="creditCardNumber" value="" class="form-control" />
+                                                                <input type="text" name="creditCardNumber" value="" class="form-control"  pattern="[0-9].{12,20}" required 
+                                                                       title="The number must be between 13 and 19 digits long!" style="font-family:Arial"/>
                                                             </div>
                                                         </div>
                                                         <div class="form-group">
                                                             <label class="control-label col-md-4">Expire Year/Month</label>
                                                             <div class="col-md-4">
-                                                                <input type="text" name="doeYear" value="" placeholder="YYYY" class="form-control" />
+                                                                <input type="text" name="doeYear" value="" placeholder="YYYY" class="form-control"  pattern="[0-9].{3,5}" required min="2017" max="2027" 
+                                                                       title="Year has to be between 2017 and 2027!" style="font-family:Arial"/>
                                                             </div>
                                                             <div class="col-md-4">
-                                                                <input type="text" name="doeMonth" value="" placeholder="MM" class="form-control" />
+                                                                <input type="text" name="doeMonth" value="" placeholder="MM" class="form-control" pattern="[0-9].{1,3}" required min="1" max="12" 
+                                                                       title="Month has to be between 01 and 12!" style="font-family:Arial"/>
                                                             </div>
                                                         </div>
                                                         <div class="form-group">
                                                             <label class="control-label col-md-4">CVR</label>
                                                             <div class="col-md-8">
-                                                                <input type="text" name="CVR" value="" class="form-control" />
+                                                                <input type="text" name="CVR" value="" class="form-control"  pattern="[0-9].{2,4}" required min="100" max="999"
+                                                                       title="The Number must be between 100 and 999!" style="font-family:Arial"/>
                                                             </div>
                                                         </div>
                                                     </div>

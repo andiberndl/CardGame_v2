@@ -534,3 +534,6 @@ C:\Users\andi\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.Web\bin\de\En
 C:\Users\andi\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.Web\obj\Debug\CardGame_v2.Web.csprojResolveAssemblyReference.cache
 C:\Users\andi\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.Web\obj\Debug\CardGame_v2.Web.dll
 C:\Users\andi\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.Web\obj\Debug\CardGame_v2.Web.pdb
+C:\Users\bernandr\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.Web\bin\itextsharp.dll
+C:\Users\bernandr\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.Web\bin\RazorPDF.dll
+C:\Users\bernandr\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.Web\bin\itextsharp.xml

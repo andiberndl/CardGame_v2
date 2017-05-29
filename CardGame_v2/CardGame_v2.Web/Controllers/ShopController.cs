@@ -8,6 +8,8 @@ using CardGame_v2.DAL.EDM;
 using CardGame_v2.DAL.Logic;
 using CardGame_v2.Log;
 using WindowsApplication1;
+using System.Net.Mail;
+using System.Net;
 
 namespace CardGame_v2.Web.Controllers
 {
@@ -197,6 +199,8 @@ namespace CardGame_v2.Web.Controllers
         {
             return View();
         }
+
+
 
     }
 }

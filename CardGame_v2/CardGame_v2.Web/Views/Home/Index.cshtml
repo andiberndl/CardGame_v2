@@ -22,14 +22,17 @@
 
                 <div class="carousel-inner">
                     <div class="item active">
-                        <a href='@Url.Action("Index","Shop")'>
+                        <a href='@Url.Action("","")'>
                             <img class="img-responsive" src='@Url.Content("~/Content/img/1.png")' />
                         </a>
                     </div>
 
                     <div class="item">
-                        <a href='@Url.Action("","")'>
-                            <img class="img-responsive" src='@Url.Content("~/Content/img/2.png")' />
+                        <a href='@Url.Action("Index","Shop")'>
+                            <br />
+                            <br />
+                            <br />
+                            <div style="text-align:center; font-size:5em; color:lawngreen; height:500px">Current exchange rate: 1:@CardGame_v2.DAL.Logic.ShopManager.GetRubyPacks()[0].RubyAmount</div>
                         </a>
                             </div>
                     <div class="item">

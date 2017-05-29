@@ -111,3 +111,7 @@ C:\Users\andi\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.DAL\bin\Debug
 C:\Users\andi\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.DAL\obj\Debug\CardGame_v2.DAL.csprojResolveAssemblyReference.cache
 C:\Users\andi\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.DAL\obj\Debug\CardGame_v2.DAL.dll
 C:\Users\andi\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.DAL\obj\Debug\CardGame_v2.DAL.pdb
+C:\Users\bernandr\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.DAL\bin\Debug\itextsharp.dll
+C:\Users\bernandr\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.DAL\bin\Debug\RazorPDF.dll
+C:\Users\bernandr\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.DAL\bin\Debug\itextsharp.xml
+C:\Users\bernandr\Documents\GitHub\CardGame_v2\CardGame_v2\CardGame_v2.DAL\bin\Debug\de\EntityFramework.SqlServer.resources.dll

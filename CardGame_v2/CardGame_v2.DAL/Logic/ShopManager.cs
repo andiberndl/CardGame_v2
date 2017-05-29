@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using CardGame_v2.DAL.EDM;
 using CardGame_v2.Log;
 using System.Data.Entity;
+using System.Net.Mail;
+using System.Net;
 
 namespace CardGame_v2.DAL.Logic
 {
@@ -209,11 +211,32 @@ namespace CardGame_v2.DAL.Logic
                                      where g.idCardPack == packID
                                      select g.RubyAmount).FirstOrDefault();
 
+                    var rubypack = (from r in db.tblCardPack
+                                    where r.idCardPack == packID
+                                    select r).FirstOrDefault();
+
                     foreach (var value in updatePerson)
                     {
                         value.currency += (int)goldValue;
+
+
+                        SmtpClient client = new SmtpClient("10.0.254.235");
+                        client.Credentials = new NetworkCredential("andreas.berndl-forstner@qualifizierung.at", "BBRZforstner1992");
+
+                        MailMessage message = new MailMessage();
+                        message.IsBodyHtml = true;
+                        message.From = new MailAddress("andreas.berndl-forstner@qualifizierung.at");
+                        message.To.Add(new MailAddress($"{value.email}"));
+                        message.Subject = "Invoice confirmation";
+                        message.Body = $"<p><b />Thanks for buying the {rubypack.packname} </p><p><b />Price: {rubypack.packprice}€</p><p><b />Exchange rate: {rubypack.RubyAmount}</p><p><b />Clonestone Gmbh Simmeringer Hauptstraße xxx, UID: ATU12345678</p>";
+
+                        client.Send(message);
                     }
                     db.SaveChanges();
+
+
+
+
                 }
                 else
                 {
@@ -222,6 +245,12 @@ namespace CardGame_v2.DAL.Logic
 
             }
             #endregion
+
+
+
+
+
+
         }
     }
 }
