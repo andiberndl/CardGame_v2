@@ -219,9 +219,9 @@ namespace CardGame_v2.DAL.Logic
                     {
                         value.currency += (int)goldValue;
 
-
+                        //TODO Password for Mail 
                         SmtpClient client = new SmtpClient("10.0.254.235");
-                        client.Credentials = new NetworkCredential("andreas.berndl-forstner@qualifizierung.at", "BBRZforstner1992");
+                        client.Credentials = new NetworkCredential("andreas.berndl-forstner@qualifizierung.at", "*****");
 
                         MailMessage message = new MailMessage();
                         message.IsBodyHtml = true;
