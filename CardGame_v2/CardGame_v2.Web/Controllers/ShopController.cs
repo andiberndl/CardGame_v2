@@ -56,6 +56,7 @@ namespace CardGame_v2.Web.Controllers
         [Authorize(Roles = "player,admin")]
         public ActionResult Index(int packID, string creditCardNumber = "")
         {
+            // Überprüfung der Creditkarte
             if (CreditCardVerification.IsValidCardNumber(creditCardNumber))
             {
                 int userID = UserManager.GetUserByEmail(User.Identity.Name).idUser;
