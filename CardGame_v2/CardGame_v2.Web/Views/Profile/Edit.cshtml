@@ -4,122 +4,120 @@
     ViewBag.Title = "Edit";
 }
 
-<h2>Edit</h2>
+<h2 style="color:lawngreen">Edit</h2>
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>tblUser</h4>
-        <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.idUser)
 
-        <div class="form-group">
+        <div class="form-group" style="color:lawngreen">
             @Html.LabelFor(model => model.firstname, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.firstname, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.firstname, new { htmlAttributes = new { @class = "form-control", @style = "background-color:transparent; border:solid 1.5px; color:lawngreen" } })
                 @Html.ValidationMessageFor(model => model.firstname, "", new { @class = "text-danger" })
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" style="color:lawngreen">
             @Html.LabelFor(model => model.lastname, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.lastname, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.lastname, new { htmlAttributes = new { @class = "form-control", @style = "background-color:transparent; border:solid 1.5px; color:lawngreen" } })
                 @Html.ValidationMessageFor(model => model.lastname, "", new { @class = "text-danger" })
             </div>
         </div>
 
-        <div class="form-group hidden">
+        <div class="form-group hidden" style="color:lawngreen">
             @Html.LabelFor(model => model.email, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.email, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.email, new { htmlAttributes = new { @class = "form-control", @style = "background-color:transparent; border:solid 1.5px; color:lawngreen" } })
                 @Html.ValidationMessageFor(model => model.email, "", new { @class = "text-danger" })
             </div>
         </div>
 
-        <div class="form-group hidden">
+        <div class="form-group hidden" style="color:lawngreen">
             @Html.LabelFor(model => model.username, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.username, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.username, new { htmlAttributes = new { @class = "form-control", @style = "background-color:transparent; border:solid 1.5px; color:lawngreen" } })
                 @Html.ValidationMessageFor(model => model.username, "", new { @class = "text-danger" })
             </div>
         </div>
 
-        <div class="form-group hidden">
+        <div class="form-group hidden" style="color:lawngreen">
             @Html.LabelFor(model => model.userpassword, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.userpassword, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.userpassword, new { htmlAttributes = new { @class = "form-control", @style = "background-color:transparent; border:solid 1.5px; color:lawngreen" } })
                 @Html.ValidationMessageFor(model => model.userpassword, "", new { @class = "text-danger" })
             </div>
         </div>
 
-        <div class="form-group hidden">
+        <div class="form-group hidden" style="color:lawngreen">
             @Html.LabelFor(model => model.usersalt, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.usersalt, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.usersalt, new { htmlAttributes = new { @class = "form-control", @style = "background-color:transparent; border:solid 1.5px; color:lawngreen" } })
                 @Html.ValidationMessageFor(model => model.usersalt, "", new { @class = "text-danger" })
             </div>
         </div>
 
-        <div class="form-group hidden">
+        <div class="form-group hidden" style="color:lawngreen">
             @Html.LabelFor(model => model.fkUserRole, "fkUserRole", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.fkUserRole,new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.fkUserRole,new { htmlAttributes = new { @class = "form-control", @style = "background-color:transparent; border:solid 1.5px; color:lawngreen" } })
                 @Html.ValidationMessageFor(model => model.fkUserRole, "", new { @class = "text-danger" })
             </div>
         </div>
 
-        <div class="form-group hidden">
+        <div class="form-group hidden" style="color:lawngreen">
             @Html.LabelFor(model => model.avatar, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.avatar, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.avatar, new { htmlAttributes = new { @class = "form-control", @style = "background-color:transparent; border:solid 1.5px; color:lawngreen" } })
                 @Html.ValidationMessageFor(model => model.avatar, "", new { @class = "text-danger" })
             </div>
         </div>
 
-        <div class="form-group hidden">
+        <div class="form-group hidden" style="color:lawngreen">
             @Html.LabelFor(model => model.currency, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.currency, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.currency, new { htmlAttributes = new { @class = "form-control", @style = "background-color:transparent; border:solid 1.5px; color:lawngreen" } })
                 @Html.ValidationMessageFor(model => model.currency, "", new { @class = "text-danger" })
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" style="color:lawngreen">
             @Html.LabelFor(model => model.street, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.street, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.street, new { htmlAttributes = new { @class = "form-control", @style = "background-color:transparent; border:solid 1.5px; color:lawngreen" } })
                 @Html.ValidationMessageFor(model => model.street, "", new { @class = "text-danger" })
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" style="color:lawngreen">
             @Html.LabelFor(model => model.zipcode, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.zipcode, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.zipcode, new { htmlAttributes = new { @class = "form-control", @style = "background-color:transparent; border:solid 1.5px; color:lawngreen" } })
                 @Html.ValidationMessageFor(model => model.zipcode, "", new { @class = "text-danger" })
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" style="color:lawngreen">
             @Html.LabelFor(model => model.city, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.city, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.city, new { htmlAttributes = new { @class = "form-control", @style = "background-color:transparent; border:solid 1.5px; color:lawngreen" } })
                 @Html.ValidationMessageFor(model => model.city, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <input type="submit" value="Save" class="btn btn-default" style="background-color:deeppink; color:lawngreen; border-color:deeppink; border:solid 1.5px"/>
             </div>
         </div>
     </div>
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to List", "Index",null, new { @style = "color:deeppink" })
 </div>
