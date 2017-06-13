@@ -19,11 +19,15 @@ namespace CardGame_v2.Web.Controllers
             return View();
         }
 
-       [HttpPost]
+        //Tutorial
+        //https://www.aspsnippets.com/Articles/Google-Charts-in-ASPNet-MVC-Google-Pie-Doughnut-Chart-example-with-database-in-ASPNet-MVC.aspx
+        [HttpPost]
        public JsonResult Chart()
         {
+            //Create select statment
             string query = "select count(packname) as amount, packname ";
             query += "from tblVirtualPurchase join tblCardPack on idCardPack = fkCardPack group by packname";
+            //Declare Conectionstring
             string constr = "Data Source=localhost;" + "Initial Catalog=CardGame_v2;" + "User id=sa;" + "Password=123user!";
             List<object> chardata = new List<object>();
             chardata.Add(new object[]
