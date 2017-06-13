@@ -273,5 +273,10 @@
       <End Role="tblUser" EntitySet="tblUser" />
       <End Role="tblVirtualPurchase" EntitySet="tblVirtualPurchase" />
     </AssociationSet>
+    <FunctionImport Name="pPackChart" ReturnType="Collection(CardGame_v2Model.pPackChart_Result)" />
   </EntityContainer>
+  <ComplexType Name="pPackChart_Result">
+    <Property Type="Int32" Name="amount" Nullable="true" />
+    <Property Type="String" Name="packname" Nullable="false" MaxLength="20" />
+  </ComplexType>
 </Schema>

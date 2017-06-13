@@ -12,6 +12,8 @@ namespace CardGame_v2.DAL.EDM
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class CardGame_v2Entities : DbContext
     {
@@ -35,5 +37,10 @@ namespace CardGame_v2.DAL.EDM
         public virtual DbSet<tblUserCardCollection> tblUserCardCollection { get; set; }
         public virtual DbSet<tblUserRole> tblUserRole { get; set; }
         public virtual DbSet<tblVirtualPurchase> tblVirtualPurchase { get; set; }
+    
+        public virtual ObjectResult<pPackChart_Result> pPackChart()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<pPackChart_Result>("pPackChart");
+        }
     }
 }

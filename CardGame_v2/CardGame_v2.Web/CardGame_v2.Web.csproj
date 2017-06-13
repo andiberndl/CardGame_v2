@@ -165,6 +165,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AuthController.cs" />
+    <Compile Include="Controllers\ChartController.cs" />
     <Compile Include="Controllers\DeckBuilderController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -176,6 +177,7 @@
     </Compile>
     <Compile Include="Models\Card.cs" />
     <Compile Include="Models\CardPack.cs" />
+    <Compile Include="Models\Chart.cs" />
     <Compile Include="Models\Deck.cs" />
     <Compile Include="Models\DeckBuilder.cs" />
     <Compile Include="Models\Order.cs" />
@@ -255,6 +257,7 @@
     <Content Include="Views\tblUsers\Edit.cshtml" />
     <Content Include="Views\tblUsers\Index.cshtml" />
     <Content Include="Views\Profile\Edit.cshtml" />
+    <Content Include="Views\Chart\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

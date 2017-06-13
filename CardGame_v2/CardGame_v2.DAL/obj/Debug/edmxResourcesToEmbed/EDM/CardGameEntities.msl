@@ -109,5 +109,13 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="pPackChart" FunctionName="CardGame_v2Model.Store.pPackChart">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CardGame_v2Model.pPackChart_Result">
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="packname" ColumnName="packname" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
   </EntityContainerMapping>
 </Mapping>

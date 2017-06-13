@@ -74,6 +74,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CardGameEntities.edmx</DependentUpon>
     </Compile>
+    <Compile Include="EDM\pPackChart_Result.cs">
+      <DependentUpon>CardGameEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="EDM\sysdiagrams.cs">
       <DependentUpon>CardGameEntities.tt</DependentUpon>
     </Compile>
