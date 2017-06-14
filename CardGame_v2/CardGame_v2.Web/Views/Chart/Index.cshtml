@@ -24,7 +24,11 @@
                     //Pie
                     var options = {
                         title: 'Best sold Packs',
-                        pieHole: 0.5
+                        pieHole: 0.5,
+                        opacity:0.4,
+                        //filter:alpha(opacity=40),
+
+                        
                     };
                     var chart = new google.visualization.PieChart($("#chart")[0]);
                     chart.draw(data, options);
@@ -40,6 +44,6 @@
     </script>
 
     <!--this is what we see-->
-    <div id="chart" style="width: 700px; height: 500px; background-color:transparent">
+    <div id="chart" style="width: 700px; height: 500px; ">
     </div>
 </div>

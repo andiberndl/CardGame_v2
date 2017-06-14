@@ -25,8 +25,8 @@ namespace CardGame_v2.Web.Controllers
        public JsonResult Chart()
         {
             //Create select statment
-            string query = "select count(packname) as amount, packname ";
-            query += "from tblVirtualPurchase join tblCardPack on idCardPack = fkCardPack group by packname";
+            string query = "select top 3 count(packname) as amount, packname ";
+            query += "from tblVirtualPurchase join tblCardPack on idCardPack = fkCardPack group by packname order by amount desc";
             //Declare Conectionstring
             string constr = "Data Source=localhost;" + "Initial Catalog=CardGame_v2;" + "User id=sa;" + "Password=123user!";
             List<object> chardata = new List<object>();
