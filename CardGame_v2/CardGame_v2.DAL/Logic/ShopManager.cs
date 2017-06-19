@@ -8,6 +8,9 @@ using CardGame_v2.Log;
 using System.Data.Entity;
 using System.Net.Mail;
 using System.Net;
+using iTextSharp.text;
+using System.IO;
+using iTextSharp.text.pdf;
 
 namespace CardGame_v2.DAL.Logic
 {
@@ -215,26 +218,103 @@ namespace CardGame_v2.DAL.Logic
                                     where r.idCardPack == packID
                                     select r).FirstOrDefault();
 
+                    int orderID = (from p in db.tblVirtualPurchase
+                                   orderby p.idVirtualPurchase descending
+                                   select p.idVirtualPurchase).FirstOrDefault();
+
                     foreach (var value in updatePerson)
                     {
                         value.currency += (int)goldValue;
-
-                        //TODO Password for Mail 
-                        SmtpClient client = new SmtpClient("10.0.254.235");
-                        client.Credentials = new NetworkCredential("andreas.berndl-forstner@qualifizierung.at", "*****");
-
-                        MailMessage message = new MailMessage();
-                        message.IsBodyHtml = true;
-                        message.From = new MailAddress("andreas.berndl-forstner@qualifizierung.at");
-                        message.To.Add(new MailAddress($"{value.email}"));
-                        message.Subject = "Invoice confirmation";
-                        message.Body = $"<p><b />Thanks for buying the {rubypack.packname} </p><p><b />Price: {rubypack.packprice}€</p><p><b />Exchange rate: {rubypack.RubyAmount}</p><p><b />Clonestone Gmbh Simmeringer Hauptstraße xxx, UID: ATU12345678</p>";
-
-                        client.Send(message);
                     }
                     db.SaveChanges();
 
+                    var updatePersonvar = (from p in db.tblUser
+                                           where p.idUser == personID
+                                           select p).FirstOrDefault();
 
+                    var pack = (from q in db.tblCardPack
+                                where q.idCardPack == packID
+                                select q).FirstOrDefault();
+
+                    SmtpClient client = new SmtpClient("srv08.itccn.loc");
+                    client.Credentials = new NetworkCredential("andreas.berndl-forstner@qualifizierung.at", "BBRZforstner1992");
+                    client.Port = 25;
+                    client.EnableSsl = false;
+
+                    MailMessage mess = new MailMessage();
+                    mess.IsBodyHtml = true;
+
+
+                    mess.From = new MailAddress("andreas.berndl-forstner@qualifizierung.at");
+                    mess.To.Add(new MailAddress($"{updatePersonvar.email}"));
+                    //mess.To.Add(new MailAddress("martin.hengsberger@qualifizierung.at"));
+
+
+                    mess.Subject = "purchase confirmation!";
+                    mess.Body = $"<p style='font-size:20px'>Thank you for your purchase! </br >" +
+                                $"<p><b>bill number:</b> {orderID}</p>" +
+                                $"<p><b>paid:</b> {pack.packprice} € (including 20% ​​tax)</p>" +
+                                $"<p><b>date of purchase:</b> {order.timeofpurchase}</p> </br >" +
+                                $"<p><b>purchased package:</b> {pack.packname}</p>" +
+                                $"<p><b>goldquantity:</b> {goldValue}</p> </br>" +
+                                $"<p>We wish you a lot of fun!</p>" +
+                                "<p><b>MTP-Group</b><br/ > Simmeringer Hauptstrasse XX<br/>1030 Wien<br/> UID:78946513</p>";
+
+
+                    //Create billing pdf for Email Attachment 
+
+                    Document document = new Document(PageSize.A4, 50, 30, 20, 20);
+
+
+                    //iTextSharp.text.Image logo = iTextSharp.text.Image.GetInstance("C:/Users/hengmart/Documents/GitHub/LAP_Project/CardGame/CardGame.Web/img/CS_Logo.png");
+                    //logo.ScalePercent(40);
+                    //logo.Alignment = iTextSharp.text.Image.ALIGN_CENTER;
+
+                    MemoryStream stream = new MemoryStream();
+                    PdfWriter pdfWriter = PdfWriter.GetInstance(document, stream);
+                    pdfWriter.CloseStream = false;
+
+                    //START PDF CREATION
+                    document.Open();
+
+                    //Add Information 
+                    //document.Add(logo);
+                    document.Add(new Paragraph($"\nThank you for your purchase!\n\n"));
+                    document.Add(new Paragraph($"Firstname: {updatePersonvar.firstname}\nLastname: {updatePersonvar.lastname}\n\n"));
+
+                    Paragraph headline = new Paragraph("Purchase\n\n");
+                    headline.Font.Size = 32;
+
+                    document.Add(headline);
+
+                    document.Add(new Paragraph($"Billingnumber: {orderID}"));
+                    document.Add(new Paragraph($"Paid: {pack.packprice} € (including 20% ​​tax)"));
+                    document.Add(new Paragraph($"Date of Purchase: {order.timeofpurchase}"));
+                    document.Add(new Paragraph($"Purchased pack: {pack.packname}"));
+                    document.Add(new Paragraph($"Goldquantity: {goldValue} Rubys"));
+
+                    document.Add(new Paragraph($"\nWe wish you a lot of fun!\n\n"));
+
+                    document.Add(new Paragraph("MTP-Group\nSimmeringer Hauptstrasse XX\n1030 Wien\nUID:78946513"));
+
+
+
+                    //Text für Rechnung
+
+                    //END PDF CREATION
+
+
+                    document.Close();
+
+                    stream.Flush(); //Always catches me out
+                    stream.Position = 0; //Not sure if this is required
+
+
+                    //////////////////////////////////////////////////////////////
+                    mess.Attachments.Add(new Attachment(stream, "billing.pdf"));
+
+
+                    client.Send(mess);
 
 
                 }
