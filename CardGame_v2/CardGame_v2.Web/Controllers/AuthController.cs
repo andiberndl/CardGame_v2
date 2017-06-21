@@ -89,7 +89,7 @@ namespace CardGame_v2.Web.Controllers
                 dbUser.currency = 1000; //Jeder faengt mit 1000 Waehrung an
 
                 dbUser.fkUserRole = 2; //Jeder ist per Default ein Spieler
-
+                dbUser.regdate = DateTime.Now;
                 if (AuthManager.Register(dbUser))
                 {
                     int userID = UserManager.GetUserByEmail(dbUser.email).idUser;

@@ -25,7 +25,8 @@ namespace CardGame_v2.Web.Models
 
         public string City { get; set; }
 
-
         public decimal Currency { get; set; }
+
+        public DateTime RegDate { get; set; }
     }
 }

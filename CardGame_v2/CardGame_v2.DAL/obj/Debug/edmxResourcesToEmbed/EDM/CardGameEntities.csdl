@@ -86,6 +86,7 @@
     <Property Name="street" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
     <Property Name="zipcode" Type="Int32" />
     <Property Name="city" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="regdate" Type="DateTime" Precision="3" />
   </EntityType>
   <EntityType Name="tblUserCardCollection">
     <Key>

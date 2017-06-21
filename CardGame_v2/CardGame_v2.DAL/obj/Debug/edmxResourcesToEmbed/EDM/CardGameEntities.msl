@@ -65,6 +65,7 @@
     <EntitySetMapping Name="tblUser">
       <EntityTypeMapping TypeName="CardGame_v2Model.tblUser">
         <MappingFragment StoreEntitySet="tblUser">
+          <ScalarProperty Name="regdate" ColumnName="regdate" />
           <ScalarProperty Name="city" ColumnName="city" />
           <ScalarProperty Name="zipcode" ColumnName="zipcode" />
           <ScalarProperty Name="street" ColumnName="street" />

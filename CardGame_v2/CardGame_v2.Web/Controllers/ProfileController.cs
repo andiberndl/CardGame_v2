@@ -35,6 +35,8 @@ namespace CardGame_v2.Web.Controllers
 
             profile.NumTotalCardsOwned = UserManager.GetNumTotalCardsOwnedByEmail(User.Identity.Name);
 
+            profile.RegDate = (DateTime)dbUser.regdate;
+
             return View(profile);
         }
 
@@ -118,9 +120,7 @@ namespace CardGame_v2.Web.Controllers
             }
             ViewBag.fkUserRole = new SelectList(db.tblUserRole, "idUserrole", "rolename", tblUser.fkUserRole);
             return View(tblUser);
-        }
-
-        
+        }        
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -137,5 +137,32 @@ namespace CardGame_v2.Web.Controllers
             return View(tblUser);
                        
         }
+
+        /// <summary>
+        /// Überprüft ob User genug Rubys hat 
+        /// zieht sie ab und erhöt das mietdatum
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult ExtendRent()
+        {
+            var updateUser = UserManager.GetUserByEmail(User.Identity.Name);
+
+            using (var db = new CardGame_v2Entities())
+            {
+                if (updateUser.currency >= 50)
+                {                    
+                    updateUser.regdate = updateUser.regdate.Value.AddMonths(1);
+                    updateUser.currency -= 50;
+
+                    db.Entry(updateUser).State = EntityState.Modified;
+                    db.SaveChanges();
+                }
+            }
+
+            return RedirectToAction("Index");
+        }
+
+
+
     }
 }

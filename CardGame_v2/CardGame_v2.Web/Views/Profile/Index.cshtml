@@ -4,46 +4,72 @@
     ViewBag.Title = "Index";
 }
 
-<h1 style="color:lawngreen">Welcome, @Model.FirstName</h1>
+@{
 
-<h2 style="color:lawngreen">
-    You currently have @Model.Currency rubys
-    <img style="height:25px" src="~/Content/img/rupeeee1.gif" />!
-</h2>
-
-<h2 style="color:lawngreen">Your Details</h2>
-<ul style="color:deeppink">
-    <li>
-        @Html.DisplayNameFor(up => up.FirstName):
-        @Html.DisplayFor(up => up.FirstName)
-    </li>
-    <li style="color:deeppink">
-        @Html.DisplayNameFor(up => up.LastName):
-        @Html.DisplayFor(up => up.LastName)
-    </li>
-    <li style="color:deeppink">
-        @Html.DisplayNameFor(up => up.Email):
-        @Html.DisplayFor(up => up.Email)
-    </li>
-</ul>
-<br />
-<h3 style="color:lawngreen">@Html.ActionLink("Cards Owned", "CardCollection", null, new { @style = "color:#7cfc00" })</h3>
-<ul>
-    <li style="color:deeppink">
-        @Html.DisplayNameFor(up => up.NumDistinctCardsOwned):
-        @Html.DisplayFor(up => up.NumDistinctCardsOwned)
-    </li>
-    <li style="color:deeppink">
-        @Html.DisplayNameFor(up => up.NumTotalCardsOwned):
-        @Html.DisplayFor(up => up.NumTotalCardsOwned)
-    </li>
-</ul>
-
-<br />
-
-<h3>@Html.ActionLink("Decks Owned", "DeckOverview", null, new { @style = "color:#7cfc00" })</h3>
+    var lastDay = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.DaysInMonth(Model.RegDate.Year, Model.RegDate.Month) - 2);
 
 
-<h3 style="color:lawngreen !important">
-    @Html.ActionLink("Edit Profile", "Edit", "Profile", new { @style = "color:#7cfc00" })
-</h3>
+    <h1 style="color:lawngreen">Welcome, @Model.FirstName</h1>
+
+    if (Model.RegDate >= lastDay)
+    {
+        <h2 style="color:lawngreen">
+            You currently have @Model.Currency rubys
+            <img style="height:25px" src="~/Content/img/rupeeee1.gif" />!
+        </h2>
+
+        <h2 style="color:lawngreen">Your Details</h2>
+        <ul style="color:deeppink">
+            <li>
+                @Html.DisplayNameFor(up => up.FirstName):
+                @Html.DisplayFor(up => up.FirstName)
+            </li>
+            <li style="color:deeppink">
+                @Html.DisplayNameFor(up => up.LastName):
+                @Html.DisplayFor(up => up.LastName)
+            </li>
+            <li style="color:deeppink">
+                @Html.DisplayNameFor(up => up.Email):
+                @Html.DisplayFor(up => up.Email)
+            </li>
+        </ul>
+        <br />
+        <h3 style="color:lawngreen">@Html.ActionLink("Cards Owned", "CardCollection", null, new { @style = "color:#7cfc00" })</h3>
+        <ul>
+            <li style="color:deeppink">
+                @Html.DisplayNameFor(up => up.NumDistinctCardsOwned):
+                @Html.DisplayFor(up => up.NumDistinctCardsOwned)
+            </li>
+            <li style="color:deeppink">
+                @Html.DisplayNameFor(up => up.NumTotalCardsOwned):
+                @Html.DisplayFor(up => up.NumTotalCardsOwned)
+            </li>
+        </ul>
+        <h3 style="color:lawngreen">@Html.ActionLink("Cards Owned", "CardCollection", null, new { @style = "color:#7cfc00" })</h3>
+        <ul>
+            <li style="color:deeppink">
+                @Html.DisplayNameFor(up => up.NumDistinctCardsOwned):
+                @Html.DisplayFor(up => up.NumDistinctCardsOwned)
+            </li>
+            <li style="color:deeppink">
+                @Html.DisplayNameFor(up => up.NumTotalCardsOwned):
+                @Html.DisplayFor(up => up.NumTotalCardsOwned)
+            </li>
+        </ul>
+        <br />
+            <h3>@Html.ActionLink("Decks Owned", "DeckOverview", null, new { @style = "color:#7cfc00" })</h3>
+            <br />
+            <h3 style="color:lawngreen">Rent paid till: @lastDay</h3>
+    }
+
+
+    if (Model.RegDate <= lastDay)
+    {
+        <h1 style="color: lawngreen">Please extent your Rent</h1>
+            <div>@Html.ActionLink("Extend Rent", "ExtendRent", "Profile", new { @style = "color:#7cfc00" })</div>
+    }
+    
+}
+
+
+

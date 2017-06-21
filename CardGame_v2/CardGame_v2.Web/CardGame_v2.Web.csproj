@@ -258,6 +258,7 @@
     <Content Include="Views\tblUsers\Index.cshtml" />
     <Content Include="Views\Profile\Edit.cshtml" />
     <Content Include="Views\Chart\Index.cshtml" />
+    <Content Include="Views\Profile\ExtendRent.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

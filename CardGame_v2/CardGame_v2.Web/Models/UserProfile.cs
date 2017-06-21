@@ -16,6 +16,7 @@ namespace CardGame_v2.Web.Models
         public string Street { get; set; }
         public int Zipcode { get; set; }
         public string City { get; set; }
+        public DateTime RegDate { get; set; }
 
         public int NumDistinctCardsOwned { get; set; }
         public int NumTotalCardsOwned { get; set; }

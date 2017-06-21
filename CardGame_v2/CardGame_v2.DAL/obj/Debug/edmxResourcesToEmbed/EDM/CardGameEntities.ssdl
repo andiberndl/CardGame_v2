@@ -73,6 +73,7 @@
     <Property Name="street" Type="nvarchar" MaxLength="150" />
     <Property Name="zipcode" Type="int" />
     <Property Name="city" Type="nvarchar" MaxLength="150" />
+    <Property Name="regdate" Type="datetime" />
   </EntityType>
   <EntityType Name="tblUserCardCollection">
     <Key>
